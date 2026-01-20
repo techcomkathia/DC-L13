@@ -17,18 +17,31 @@ O curso está dividido em módulos, cobrindo os principais conceitos e ferrament
 
 1. **HTML e CSS**
    - Estrutura básica de páginas web
-   - Flexbox e Grid Layout
+   - Principais Tags HTML: 
+      - Títulos e Parágrafos
+      - Listas e Tabelas
+      - Imagens e Links
+      - Divisões e HTML semântico
+   - CSS:
+      - Tipografia: estilos de fonte, tamanhos e alinhanentos
+      - Aplicação de cores: fontes e planos de fundo e bordas
+      - Modelo de caixa: margin, padding e border
+      - Displays
+      - Flexbox e Grid Layout
    - Bibliotecas de Estilo
 
 2. **JavaScript**
    - Lógica de programação
-   - Introdução ao JavaScript
    - ES6+ (let, const, arrow functions, template literals, etc.)
+   - Condicionais
+   - Laços de repetição
+   - Funções
+   - Arrays e Objetos
    - Manipulação de arrays e objetos
+   - JavaScript assíncrono 
    - Consumo de APIs
-   - Promises e Async/Await
+   - Async/Await
   
-   
 3. **React**
    - Criação de componentes
    - Gerenciamento de estado com hooks (useState, useEffect)
@@ -37,11 +50,11 @@ O curso está dividido em módulos, cobrindo os principais conceitos e ferrament
 
 6. **Bancos de Dados**
    - Bancos de dados relacionais (MySQL)
-   - Integração com back-end (ORM Sequelize)
 
 6. **Node.js**
    - Introdução ao Node.js
    - Criação de API com Express
+   - Integração com back-end (ORM Sequelize)
    - Arquitetura MVC
    - Manipulação de rotas e middlewares
    - Autenticação com JWT e segurança
