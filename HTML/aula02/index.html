@@ -58,7 +58,7 @@
     <p>JavaScript</p>
     <p>React</p> -->
     <h2>Listas Ordenadas</h2>
-    <ol>
+    <ol >
         <li>HTML</li>
         <li>CSS</li>
         <li>Bibliotecas de CSS</li>
@@ -67,6 +67,73 @@
         <li>React</li>
     </ol>
 
+    <h3>Atributos type e start</h3>
+
+    <h4>Type 1</h4>
+    <ol type="1">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bibliotecas de CSS</li>
+        <li>Git e GitHub</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ol>
+
+    <h4>Type A / a</h4>
+    <ol type="a">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bibliotecas de CSS</li>
+        <li>Git e GitHub</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ol>
+
+    <h4>Type I / i</h4>
+    <ol type="I">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bibliotecas de CSS</li>
+        <li>Git e GitHub</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ol>
+
+    <h4>Start</h4>
+
+    <p>Tem a característica de configurar o início de uma lista. Muito útil quando precisamos recomeçar a contagem de uma lista. </p>
+
+    <ol start="1">
+        <li>Coisa</li>
+        <li>Coisa</li>
+        <li>Coisa</li>
+    </ol>
+
+    <p>Um parágrafo que explica a primeira parte da lista e a lista deverá continuar depois, com a contagem continuada</p>
+    
+    <ol start="4">
+        <li>Coisa</li>
+        <li>Coisa</li>
+        <li>Coisa</li>
+    </ol>
+
+    <p>Para listas com o type diferente de 1, o start continuará recebendo o valor númerico. O número indica "posição" do elemento na lista</p>
+
+    <ol type="a" start="1">
+        <li>Coisa</li>
+        <li>Coisa</li>
+        <li>Coisa</li>
+    </ol>
+
+    <p>Um parágrafo que explica a primeira parte da lista e a lista deverá continuar depois, com a contagem continuada</p>
+    
+    <ol type="a" start="4">
+        <li>Coisa</li>
+        <li>Coisa</li>
+        <li>Coisa</li>
+    </ol>
+
+    
     <h2>Listas Não Ordenadas</h2>
     <ul>
         <li>HTML</li>
@@ -78,24 +145,69 @@
     </ul>
 
     <!-- li*5 -->
-    <ol>
+    <!-- <ol>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
-    </ol>
+    </ol> -->
 
     <!-- ol>li*5 -->
-    <ol>
+    <!-- <ol>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
-    </ol>
+    </ol> -->
 
 
+    <h2>Lista de Definições </h2>
+
+    <!-- as listas de definição não têm LIs dentro delas -->
+
+    <dl>
+        <!-- cada termo tem uma definição. Os "itens" dessa lista sempre são compostos por esses dois elementos -->
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação de Hipertexto. Determina a estrutura e semântica de uma páginas web</dd>
+
+        <dt>CSS</dt>
+        <dd> Linguagem de Marcação de Hipertexto. Determina a apresentação e a aparencia de uma páginas web</dd>
+
+        <dt>JavaScript</dt>
+        <dd> Linguagem de Programação. Determina a interatividade de uma páginas web</dd>
+    </dl>
+
+
+    <h2>Listas Mistas</h2>
+
+    <dl>
+        <dt>Café</dt>
+        <dd>
+            <ol>
+                <li>Grão da planta café</li>
+                <li>Bebida servida geralmente quente. </li>
+                <li>Superfaturado</li>
+                <li>Cafezinho. Uso no diminutivo e pode estar ligado a um encontro social, não necessariamente a bebida em si.</li>
+            </ol>
+        </dd>
+
+    </dl>
+
+
+    <ul>
+        <li>Acordar</li>
+        <li>
+            <ol>
+                <li>Tomar banho</li>
+                <li>Escovar os dentes</li>
+                <li>Arrumar o <strong>quarto</strong></li>
+                <li>passar protetor solar</li>
+            </ol>
+        </li>
+        <li>Trabalhar</li>
+    </ul>
 
 
 </body>
