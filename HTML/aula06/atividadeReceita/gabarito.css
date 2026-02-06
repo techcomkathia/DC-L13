@@ -1,0 +1,27 @@
+/* crie um arquivo css externo (style.css) link no head e faça as seguintes estilizações:
+      - adicione uma cor de plano de fundo para o header e o footer, coloque uma cor de fonte que combine com o plano de fundo
+
+      - os títulos das sessoes devem ser coloridos com a mesma cor do plano de fundo do header e do footer
+      - os textos das listas devem ser coloridos  com uma cor diferente da do plano de fundo do header e do footer, mas que combine. 
+
+      dica: propriedade background-color e color :) utilize os seletores de tag  ou aplique classes. O que for mais fizer sentido pra voce
+ */
+
+/* estilização por classe para atribuir as tags header e footer */
+.planoDeFundo{
+    background-color:purple;
+    color:pink
+}
+/* a cor da fonte também é atribuida a todos os textos dentro das divisões */
+
+a{
+    color:pink
+}
+
+h2{
+    color: purple;
+}
+
+li{
+    color:blueviolet;
+}

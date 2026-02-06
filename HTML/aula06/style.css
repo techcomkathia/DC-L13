@@ -1,0 +1,25 @@
+/* ordem de prevalencia de estilização (menos especifico para mais especifico) */
+
+/* seletores de TAG */
+
+p{
+    background-color: burlywood;
+    color:darkgreen;
+}
+
+div{
+    background-color:darkblue;
+
+}
+
+/* seletores de classe */
+/* caracteristicas de css aplicadas a tags são substituidas por caracteristicas de css aplicadas  pelas classes */
+.vermelho{
+    color:red;
+}
+
+/* seletores de ID */
+/* são os mais especificos. Substituem as caracteristicas das classes e das tags quando aplicados no mesmo elemento */
+#especial{
+    color: floralwhite;
+}
