@@ -1,0 +1,50 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    color:blue;
+    font-family: 'Times New Roman', Times, serif
+}
+
+/* seletor de classe */
+.centralizado{
+    text-align: center;
+    color:red;
+}
+
+.esquerda{
+    text-align: left;
+    color: green;
+}
+
+.direita{
+    text-align: right;
+    color: purple;
+}
+
+.justificado{
+    text-align: justify;
+    color: brown;
+}
+
+.tamanhoGrande{
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.fonteLeve{
+    font-weight: 300;
+}
+
+.fonteNormal{
+    font-weight: normal;
+}
+
+.fonteNegrito{
+    font-weight: bolder;
+}
+
+.fonteItalico{
+    font-style: italic;
+}
