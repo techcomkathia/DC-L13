@@ -1,0 +1,46 @@
+
+/* sessão 1 - tipos de fontes */
+
+.texto-alternativo{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.texto-decorativo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* sessão 2 - Peso das fontes */
+
+.peso-leve{
+    font-weight:300;
+}
+
+.peso-normal{
+    font-weight:normal;
+}
+
+.peso-forte{
+    font-weight:800;
+}
+
+/* sessão 3 - alinhamento de texto */
+
+.alinhado-esquerda{
+    text-align: left;
+}
+
+.alinhado-centro{
+    text-align: center;
+}
+
+.alinhado-direita{
+    text-align: right;
+}
+
+/* sessão 4 - combinação de estilos E REVISÃO DE CORES */
+
+.destaque-cor{
+    background-color: blue;
+    color: #ffff;
+}
+
