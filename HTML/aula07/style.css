@@ -1,3 +1,11 @@
+/* Reset de margens e paddings de todos os elementos do html com o seletor all (*), na primeira linha do arquivo */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -47,4 +55,89 @@ p{
 
 .fonteItalico{
     font-style: italic;
+}
+
+
+.apagar{
+    display: none;
+}
+
+/* MODELO DE CAIXA */
+/* Reset de margens e paddings de todos os elementos do html com o seletor all (*), na primeira linha do arquivo */
+
+.bordaCompleta{
+    /* border-color: blue;
+    border-width: 5px;
+    border-style: solid; */
+    /* resume em uma linha as 3 propriedades básicas de uma borda */
+    border:15px solid green;
+}
+
+.bordaEsquerda{
+    border-left: 20px solid red;
+}
+
+.bordaDireita{
+    border-right: 20px solid yellow;
+}
+
+.bordaSuperior{
+    border-top: 20px solid blue;
+}
+
+.bordaInferior{
+    border-bottom: 20px solid orange;
+}
+
+
+
+
+#div1{
+    border: 2px solid red;
+    background-color: lightcoral;
+    /* espaçamento externo, distancia os outros elementos da borda */
+    margin:20px;
+
+}
+
+#div2{
+    border:2px solid green;
+    background-color: lightgreen;
+    /* espaçamento interno , cria um preenchimento dentro da borda */
+    padding: 20px;
+}
+
+#div3{
+    border: 2px solid purple;
+    background-color: lightpink;
+    /* espaçamento externo, distancia os outros elementos da borda */
+    margin:20px;
+    /* espaçamento interno , cria um preenchimento dentro da borda */
+    padding: 20px;
+}
+
+#div4{
+    border:5px solid brown;
+    background-color: lightsalmon;
+    /* padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px; */
+    /* RESUMIDAMENTE passamos 2 valores, o primeiro de cima e de baixo e o segundo esquerda e para direita */
+    padding: 30px 15px;
+}
+
+#div5{
+    border: 2px solid red;
+    background-color: lightcoral;
+    margin: 10px;
+    /* espaçamento interno , cria um preenchimento dentro da borda */
+    padding: 20px;  
+    /* paddings na ordenação do sentido horario: superior, direita, inferior, esquerda */
+    padding: 5px 40px 10px 20px ;
+}
+
+.filhoDiv{
+    background-color: lightblue;
+    border: 2px solid blue;
 }
