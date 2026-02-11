@@ -57,7 +57,7 @@ p{
     font-style: italic;
 }
 
-
+/* adicione/remova essa classe para 'ocultar'/'mostrar' um elemento */
 .apagar{
     display: none;
 }
