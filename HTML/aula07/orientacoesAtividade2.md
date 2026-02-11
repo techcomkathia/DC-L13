@@ -18,7 +18,7 @@ Aplicar os conceitos de **espaçamento externo**, **espaçamento interno**, **bo
 
 Aplique os seguintes estilos no **header**:
 
-### Espaçamento interno
+### Espaçamento interno (padding) 
 - Todos os lados iguais: `20px`
 
 ### Borda
