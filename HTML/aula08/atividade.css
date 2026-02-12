@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* EXERCÍCIO 1:
+1. Transforme os links do menu utilizando as propriedades de display.
+2. Os itens do menu devem ser renderizados um ao lado do outro e com espaçamento entre eles: utilize margin para isso. */
+/* apenas os li que estiverem dentro uma ul e dentro de uma tag nav */
+
+nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+/* aplicar a mesma regra de css para um ou mais seletores */
+.menu, .logo{
+    display: inline-block;
+}
+/*  */
+
+/*        
+    1. Defina um background claro para a seção do banner.
+    2. Teste como imagens se comportam como inline e block.
+    3. As imagens devem ser renderizadas uma abaixo da outra, com espaçamento de 10px entre elas apenas usando as propriedades de margin e display.
+    4. As imagens devem ser centralizadas horizontalmente. Você pode usar as propriedades de margin para isso também.
+ */
+
+/* plano de fundo */
+
+.banner{
+    background-color: #000407;
+    padding: 20px;
+}
+
+.banner-img{
+    display: block;
+    margin: 10px auto;
+}
