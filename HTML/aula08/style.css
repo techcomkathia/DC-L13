@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rosa{
+    background-color: pink;
+    border: 2px solid red;
+}
+
+.verde{
+    background-color: lightgreen;
+    border: 2px solid green;
+}
+
+p{
+    display: block;
+    /* padrão para altura é o tamanho do conteúdo, mas pode ser definido um valor específico */
+    width: 500px;
+    /* largura é 100% do elemento pai, mas pode ser definido um valor específico */
+}
+
+img{
+    display:block;
+    /* para centralizar um elemento com display block, utiliza-se margin: valor auto */
+    margin: 10px auto;
+}
+
+h1{
+    display: inline;
+    /* o display inline faz com que o elemento seja renderizado um ao lado do outro */
+    /* as propriedades width e height nao se aplicam, pois são definidas pelo tamanho do conteúdo */
+    width: 800px;
+}
+
+h2{
+    display: inline-block;
+    /* o display inline-block faz com que o elemento seja renderizado um ao lado do outro, mas permite definir as propriedades width e height */
+    width: 300px;
+    height: 150px;
+}
+
