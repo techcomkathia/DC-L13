@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: darkslategray; */
+    background-image: url(img/black-texture.jpg) ;
+    background-repeat: repeat;
+    /* utilizado para imagens grandes que não devem se repetir */
+    /* background-repeat: no-repeat ;
+    background-size: cover; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
+}
+
+div{
+    background-color: aquamarine;
+    width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px ;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* transformando uma img quadrada em um circulo */
+
+img{
+    border-radius: 50%;
+    width: 300px;
+    margin: 0px auto;
+    /* margin automática só funciona para display block */
+    display: block;
+}
+
+a{
+    display: block;
+    background-color: darkgreen;
+    margin:10px 0px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+}
+
+/* regra de css para o hover: interacao com o mouse. Aplica as regras quando o mouse estiver sobre o link */
+
+a:hover{
+    background-color: rgb(90, 29, 133);
+    color:aquamarine;
+    font-size:20px ;
+}
+
+p{
+    text-align: center;
+    margin-top: 20px;
+}
