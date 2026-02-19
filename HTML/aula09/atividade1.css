@@ -1,0 +1,11 @@
+
+.flex-teste-vertical{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+img{
+    width: 200px;
+    margin: 40px;
+}

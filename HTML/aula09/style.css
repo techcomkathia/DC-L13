@@ -1,0 +1,72 @@
+.vermelho{
+    background-color: red;
+}
+
+.verde{
+    background-color: green;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.azul, .verde, .vermelho{
+    padding: 20px;
+    color: white;
+}
+
+.container-basico{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: black;
+}
+
+.container-basico2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 20px;
+    background-color: rgb(44, 44, 44);
+}
+
+.container-justify{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-evenly;
+    height: 400px;
+}
+
+.container-justify-column div{
+    width: 50px;
+}
+
+.container-justify-column{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+    padding: 20px;
+    justify-content: space-evenly;
+    height: 800px;
+}
+
+.container-align{
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    height: 400px;
+    /* align-items: center; */
+    align-content: baseline;
+}
+
+.container-align-column{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+    padding: 20px;
+    height: 600px;
+    align-items: center;
+}

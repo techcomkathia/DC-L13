@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula de Display Flex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Display Flex - Aula Prática</h1>
+        <p>Explorando organização e alinhamento com Flexbox.</p>
+    </header>
+
+
+    <!-- ===================================== -->
+    <!-- 1. DISPLAY FLEX -->
+    <!-- ===================================== -->
+    <section class="secao">
+        <h2>1. Ativando o Flex</h2>
+
+        <p class="explicacao">
+            Ao ativar o modo flexível no container pai, os elementos internos passam
+            a se organizar em linha automaticamente. Essa propriedade altera o
+            comportamento padrão dos elementos, permitindo controle de alinhamento,
+            espaçamento e direção.
+        </p>
+
+        <div class="container container-basico">
+            <div class="item vermelho">Item 1</div>
+            <div class="item verde">Item 2</div>
+            <div class="item azul">Item 3</div>
+            <div class="item vermelho">Item 4</div>
+            <div class="item verde">Item 5</div>
+            <div class="item azul">Item 6</div>
+            <div class="item vermelho">Item 7</div>
+            <div class="item verde">Item 8</div>
+            <div class="item azul">Item 9</div>
+            <div class="item vermelho">Item 10</div>
+            <div class="item verde">Item 11</div>
+            <div class="item azul">Item 12</div>
+            <div class="item vermelho">Item 13</div>
+            <div class="item verde">Item 14</div>
+            <div class="item azul">Item 15</div>
+            <div class="item vermelho">Item 16</div>
+            <div class="item verde">Item 17</div>
+            <div class="item azul">Item 18</div>
+        </div>
+
+        <div class="container container-basico2">
+            <a href="#"> link 1</a>
+            <a href="#"> link 2</a>
+            <a href="#"> link 3</a>
+            <a href="#"> link 4</a>
+            <h1>Exemplo de titulo</h1>
+        </div>
+    </section>
+
+
+    <!-- 2. FLEX-DIRECTION -->
+
+    <section class="secao">
+        <h2>2. Direção dos Itens</h2>
+
+        <p class="explicacao">
+            É possível alterar a direção dos elementos internos, organizando-os
+            na horizontal, vertical ou até invertendo sua ordem visual.
+        </p>
+
+        <div class="container container-direcao">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </section>
+
+
+    <!-- 3. JUSTIFY-CONTENT -->
+
+    <section class="secao">
+        <h2>3. Alinhamento no Eixo Principal</h2>
+
+        <p class="explicacao">
+            Permite distribuir os elementos ao longo do eixo principal.
+            É possível centralizar, distribuir igualmente ou posicionar
+            os itens no início ou no final do container.
+        </p>
+
+        <div class="container container-justify">
+            <div class="item vermelho">1</div>
+            <div class="item verde">2</div>
+            <div class="item azul">3</div>
+        </div>
+
+        <div class="container container-justify-column">
+            <div class="item vermelho">1</div>
+            <div class="item verde">2</div>
+            <div class="item azul">3</div>
+        </div>
+    </section>
+
+
+
+    <!-- 4. ALIGN-ITEMS -->
+
+    <section class="secao">
+        <h2>4. Alinhamento no Eixo Cruzado</h2>
+
+        <p class="explicacao">
+            Controla como os elementos se posicionam no eixo perpendicular
+            ao principal. É muito utilizado para centralizar verticalmente
+            ou fazer os elementos ocuparem toda a altura disponível.
+        </p>
+
+         <div class="container container-align">
+            <div class="item vermelho">1 lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore molestiae praesentium unde commodi sapiente earum qui alias aspernatur modi delectus architecto voluptates tenetur eius quibusdam libero in dolor nesciunt facere laborum, soluta quisquam voluptatum? Earum sint facere consectetur. Perspiciatis, quaerat consequatur harum deserunt quibusdam esse nisi ducimus consectetur neque aperiam ab facilis, ipsam cumque dolor, ullam repudiandae tempora necessitatibus magnam! Laboriosam sapiente nesciunt quidem repellat cum. Distinctio tenetur aliquam dolorem minus enim, ipsa cumque dolores? Obcaecati dolore doloribus amet quisquam, autem eos distinctio ullam exercitationem nulla in nobis expedita ut!
+                .
+
+            </div>
+            <div class="item verde">2</div>
+            <div class="item azul">3</div>
+        </div>
+
+        <div class="container container-align-column">
+            <div class="item vermelho">1</div>
+            <div class="item verde">2</div>
+            <div class="item azul">3</div>
+        </div>
+    </section>
+
+
+    <!-- 5. FLEX-WRAP -->
+
+    <section class="secao">
+        <h2>5. Quebra de Linha</h2>
+
+        <p class="explicacao">
+            Quando o espaço horizontal não é suficiente, os elementos podem
+            ser forçados a quebrar linha, formando múltiplas linhas dentro
+            do mesmo container.
+        </p>
+
+        <div class="container container-wrap">
+            <div class="item">Item</div>
+            <div class="item">Item</div>
+            <div class="item">Item</div>
+            <div class="item">Item</div>
+            <div class="item">Item</div>
+            <div class="item">Item</div>
+        </div>
+    </section>
+
+
+
+    <!-- 6. FLEX-GROW -->
+
+    <section class="secao">
+        <h2>6. Crescimento Proporcional</h2>
+
+        <p class="explicacao">
+            Cada elemento pode crescer de maneira proporcional para ocupar
+            o espaço restante disponível dentro do container.
+        </p>
+
+        <div class="container container-grow">
+            <div class="item grow1">1</div>
+            <div class="item grow2">2</div>
+            <div class="item grow3">3</div>
+        </div>
+    </section>
+
+
+   
+    <!-- 7. ALIGN-SELF -->
+
+    <section class="secao">
+        <h2>7. Alinhamento Individual</h2>
+
+        <p class="explicacao">
+            Permite que um único elemento tenha um alinhamento diferente
+            dos demais dentro do mesmo container.
+        </p>
+
+        <div class="container container-self">
+            <div class="item">Normal</div>
+            <div class="item destaque">Diferente</div>
+            <div class="item">Normal</div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>Aula prática de Flexbox</p>
+    </footer>
+
+</body>
+</html>
