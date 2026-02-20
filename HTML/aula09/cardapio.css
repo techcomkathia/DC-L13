@@ -18,3 +18,47 @@ header{
     align-items: center;
     justify-content: center;
 }
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;   
+}
+
+ul li a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h1 , h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.boxProduto{
+    background-color:#122b76;
+    max-width: 890px;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boxTexto{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.boxImg img{
+    width: 400px;
+}
+
+.btn{
+    width: 150px;
+}
+
