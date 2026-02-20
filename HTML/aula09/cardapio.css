@@ -36,8 +36,12 @@ h1 , h2{
     margin: 20px;
 }
 
+h2{
+    color: #FFAE00;
+}
+
 .boxProduto{
-    background-color:#122b76;
+    background-color:RGBA(37, 37, 37, 0.8);
     max-width: 890px;
     margin: 20px auto;
     border-radius: 20px;
@@ -60,5 +64,11 @@ h1 , h2{
 
 .btn{
     width: 150px;
+    background-color: #FFAE00;
+    padding: 20px;
+    border:none;
+    border-radius: 10px;
+    color: #ffff;
 }
+
 
