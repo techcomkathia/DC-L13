@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de HTML Collection e Array</h1>
+
+    <h2>Lista não ordenada</h2>
+    <ul>
+        <li>Item 1 de uma ul</li>
+        <li>Item 2 de uma ul</li>
+        <li>Item 3 de uma ul</li>
+    </ul>
+
+    <h2>Lista ordenada</h2>
+    <ol>
+        <li>Item 1 de uma ol</li>
+        <li>Item 2 de uma ol</li>
+        <li>Item 3 de uma ol</li>
+    </ol>
+
+    <script>
+        //html collection: não tem métodos para modificar o dom, como filter, map, reduce, etc.
+        const h1 = document.getElementsByTagName('h1')
+        const li = document.getElementsByTagName('li')
+        const h2 = document.getElementsByTagName('h2')
+
+        const listaH1 = [...h1] // desestrutura o html collection para um array
+        const listaH2 = Array.from(h2) //instacia um array a partir do html collection
+
+        console.log(h1)
+        console.log(listaH1)
+        console.log(h2)
+        console.log(listaH2)
+
+        listaH2.forEach((item) => console.log(item.innerHTML))
+    </script>
+    
+</body>
+</html>

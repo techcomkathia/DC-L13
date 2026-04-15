@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Documento</title>
+</head>
+<body>
+    <h1>Título principal</h1>
+    <p>Parágrafo principal Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, minima.</p>
+    <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="imagem Exemplo">
+    <h1>Título secundario</h1>
+    <h1>Título secundario</h1>
+
+    <div id="tagComFilhos">
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+    </div>
+
+
+    <script>
+        // excepcionalmente usando um script interno para exemplos
+        const elementos = document.getElementsByTagName('h1')
+        console.log(elementos)
+        //selecionando o primeiro titulo e modificando sua cor de fundo
+        elementos[0].style.backgroundColor = 'red'
+        //modificando o texto da tag
+        elementos[0].innerText = 'Novo titulo'
+
+        // para tags de conteúdo o innerHTML e o innerText podem retornar a mesma informação
+        console.log(elementos[0].innerHTML)
+        console.log(elementos[0].innerText)
+
+        //acessandoElementosFilhos
+        const tagComFilhos = document.getElementById('tagComFilhos')
+        // para tags que agrupam outras tags o innerHTML e o innerText vão mostrar coisas diferentes
+        console.log(tagComFilhos.innerHTML) //inclui as tags e os textos de todos os elementos filhos
+        console.log(tagComFilhos.innerText) //apenas os textos de todos os elementos filhos
+        
+    </script>
+</body>
+</html>

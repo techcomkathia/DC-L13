@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>TÍTULO PRINCIPAL</h1>
+
+    <button onclick="minhaFuncao()">Click aqui para mudar o texto</button>
+
+    <button onclick="adicionarConteudo()">Click para adicionar texto a div</button>
+
+    <div>
+
+    </div>
+
+
+    <script>
+        function minhaFuncao(){
+            // uma função sem parâmetros que pede um texto ao usuário e adiciona ele no innerHTML do título.
+
+            let textoUsuario = prompt('Digite o novo conteúdo do título')
+
+            let listaH1 = document.getElementsByTagName('h1')
+
+            listaH1[0].innerHTML= textoUsuario
+        }
+
+        function adicionarConteudo(){
+            const div = document.getElementsByTagName('div')[0] //já atribui apenas o objeto da primeira divisão
+
+            div.innerHTML+= "<h5> novo parágrafo adicionado com uma função </h5>"
+        }
+
+    </script>
+    
+</body>
+</html>

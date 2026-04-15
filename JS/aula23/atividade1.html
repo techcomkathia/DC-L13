@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) faça a seleção de todos os parágrafos do documento, mofique a propriedade color do segundo parágrafo para azul. Dica: o html collection e um array, para acessar os elementos utilizamos o index -->
+
+    <h1>Trabalhando com os métodos do document</h1>
+    <h2>Seleção de elementos por tag</h2>
+    <p>Parágrafo 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, minima.</p>
+    <p>Parágrafo 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, minima.</p>
+    <p>Parágrafo 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, minima.</p>
+    <p class="borda">Os métodos document.getElementsByTagName e document.getElementsByClassName podem ser usados para selecionar mais de um elemento e sempre retornam um html collection. O método document.getElementById retorna apenas um elemento</p>
+
+    <!--2) Modifique o plano de fundo do elemento com id especial -->
+
+    <h2>Seleção de elementos por id</h2>
+    <ul>
+        <li>Item normal</li>
+        <li>Item normal</li>
+        <li id="especial">Item especial</li>
+        <li>Item normal</li>
+        <li>Item normal</li>
+    </ul>
+
+    <h2>Seleção de elementos por classe</h2>
+    <!-- adicione uma borda azul de 2px e solida para todos os elementos com a classe borda -->
+    <!-- utilizem um laço de repetição para adicionar a borda, de forma que todos os elementos tenham uma borda sem exceção e sem adicionar a borda manualmente -->
+    <div class="borda">
+        <img src="https://placehold.co/600x400/000000/FFFFFF/png" alt="imagem Exemplo">
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+    </div>
+    
+    <script src="atividade1.js"></script>
+</body>
+</html>
