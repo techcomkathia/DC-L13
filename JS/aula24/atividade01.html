@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Atividade 01</h1>
+
+    <p>Utilizar os metodos querySelector e querySelectorAll para fazer as manipulações na página</p>
+
+    <h2>Tamanhos dos sapatos</h2>
+    <p>A lista abaixo mostra os tamanhos dos sapatos infantis que são fabricados pelo Cleitinho Calçados</p>
+    <p>Caso estejam com a tag indisponível, entre em contato para fazer o pedido</p>
+
+    <!-- Faça a manipulação de todos os lis de uma vez. Adicione o texto "indisponível"  para os números 17, 20 e 23 
+     Dica: use o querySelectorAll e a propriedade textContent ou innerText para avaliar o texto de cada LI
+    -->
+    <ul>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+    </ul>
+
+    <script>
+        //seleção dos elementos que serão manipulados
+
+        const itensLista = document.querySelectorAll("li");
+        let numerosIndisponiveis = [17, 20, 23,24];
+        
+        //criação de uma função para modificar os elementos selecionados
+        function atualizarNumerosDisponiveis(){
+            //acessa cada um dos itens da lista e verifica se o valor dele está incluido no array de numerosIndisponiveis
+            let elementosLista = Array.from(itensLista); //isso permite o uso dos metodos do array
+
+            elementosLista.forEach((item)=>{
+                if(numerosIndisponiveis.includes(Number(item.innerText))){
+                    item.innerText += " - Indisponível";
+                    //outras alterações possíveis
+                    //item.style.color = "red";
+                    //item.style.display = "none"
+                }
+
+                console.log(item)
+            })
+
+            /*alternativa sem a necessidade de trabalho com arrays ( usando diretamente o nodeList)
+
+            for(let i = 0; i < itensLista.length; i++){
+                if(numerosIndisponiveis.includes(itensLista[i].innerText)){
+                    itensLista[i].innerText += " - Indisponível";
+                }
+            }
+
+            */
+        }
+
+        atualizarNumerosDisponiveis();
+
+
+
+    </script>
+    
+</body>
+</html>
