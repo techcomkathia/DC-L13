@@ -18,3 +18,4 @@ let listaH2 = [...todosH2]
 listaH2.map((item)=>{
     item.style.color = 'red'
 })
+

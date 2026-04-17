@@ -22,31 +22,61 @@
 
 
     <script>
+        //definição das variáveis globais
 
-    const produtos = [
-        { nome: "Maçã", preco: 4.50, categoria: "Frutas" },
-        { nome: "Banana", preco: 3.20, categoria: "Frutas" },
-        { nome: "Laranja", preco: 3.80, categoria: "Frutas" },
-        { nome: "Abacaxi", preco: 5.90, categoria: "Frutas" },
-        { nome: "Manga", preco: 4.00, categoria: "Frutas" },
-        { nome: "Uva", preco: 6.50, categoria: "Frutas" },
-        { nome: "Morango", preco: 7.00, categoria: "Frutas" },
+        //elementos que serão manipulados no html
+        const frutasLista = document.getElementById("frutasLista");
+        const verdurasElegumesLista = document.getElementById("verdurasElegumesLista");
 
-        { nome: "Alface", preco: 2.50, categoria: "Verduras" },
-        { nome: "Couve", preco: 2.80, categoria: "Verduras" },
-        { nome: "Espinafre", preco: 3.00, categoria: "Verduras" },
-        { nome: "Rúcula", preco: 2.70, categoria: "Verduras" },
-        { nome: "Agrião", preco: 2.90, categoria: "Verduras" },
-        { nome: "Repolho", preco: 3.50, categoria: "Verduras" },
+        //informações dos produtos
+        const produtos = [
+            { nome: "Maçã", preco: 4.50, categoria: "Frutas" },
+            { nome: "Banana", preco: 3.20, categoria: "Frutas" },
+            { nome: "Laranja", preco: 3.80, categoria: "Frutas" },
+            { nome: "Abacaxi", preco: 5.90, categoria: "Frutas" },
+            { nome: "Manga", preco: 4.00, categoria: "Frutas" },
+            { nome: "Uva", preco: 6.50, categoria: "Frutas" },
+            { nome: "Morango", preco: 7.00, categoria: "Frutas" },
 
-        { nome: "Tomate", preco: 4.20, categoria: "Legumes" },
-        { nome: "Cenoura", preco: 3.00, categoria: "Legumes" },
-        { nome: "Batata", preco: 3.60, categoria: "Legumes" },
-        { nome: "Cebola", preco: 2.80, categoria: "Legumes" },
-        { nome: "Abobrinha", preco: 3.40, categoria: "Legumes" },
-        { nome: "Berinjela", preco: 4.10, categoria: "Legumes" },
-        { nome: "Pimentão", preco: 5.00, categoria: "Legumes" }
-        ];
+            { nome: "Alface", preco: 2.50, categoria: "Verduras" },
+            { nome: "Couve", preco: 2.80, categoria: "Verduras" },
+            { nome: "Espinafre", preco: 3.00, categoria: "Verduras" },
+            { nome: "Rúcula", preco: 2.70, categoria: "Verduras" },
+            { nome: "Agrião", preco: 2.90, categoria: "Verduras" },
+            { nome: "Repolho", preco: 3.50, categoria: "Verduras" },
+
+            { nome: "Tomate", preco: 4.20, categoria: "Legumes" },
+            { nome: "Cenoura", preco: 3.00, categoria: "Legumes" },
+            { nome: "Batata", preco: 3.60, categoria: "Legumes" },
+            { nome: "Cebola", preco: 2.80, categoria: "Legumes" },
+            { nome: "Abobrinha", preco: 3.40, categoria: "Legumes" },
+            { nome: "Berinjela", preco: 4.10, categoria: "Legumes" },
+            { nome: "Pimentão", preco: 5.00, categoria: "Legumes" }
+            ];
+
+        function mostrarProdutos(){
+            produtos.forEach((produto)=>{
+                //criar o li  
+                //adicionar o texto do nome produto mais o preço dentro do innerHTML do li
+                let itemLista= document.createElement('li')
+                itemLista.innerHTML = `${produto.nome} - R$ ${produto.preco}`
+
+                if(produto.categoria == 'Frutas'){  
+                    //adicionar o li criado a lista adequada
+                    //elementopai.appendChild(elementoFilho)
+                    frutasLista.appendChild(itemLista)
+                }
+                else if (produto.categoria == 'Verduras'){
+                    verdurasElegumesLista.appendChild(itemLista)
+                }
+                else{
+                    console.log(`Item não adicionado às listas exibidas no HTML ${produto.nome}, ${produto.categora}`)
+                }
+            })
+        }
+
+        
+        mostrarProdutos()
 
     </script>
     

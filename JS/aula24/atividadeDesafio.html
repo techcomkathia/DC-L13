@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Reset básico */
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        }
+
+        /* Título principal */
+        .titulo-principal {
+        font-size: 32px;
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        }
+
+        /* Container geral dos livros */
+        .container-livros {
+        padding: 10px;
+        background-color: #b2bec3;
+        border-radius: 8px;
+        border: 2px solid #596364;
+        }
+
+        /* Card do livro */
+        .card-livro {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 200px;
+        }
+
+        /* Título do livro */
+        .titulo-livro {
+        font-size: 20px;
+        color: #34495e;
+        margin: 5px 0;
+        }
+
+        /* Autor e infos */
+        .texto-livro {
+        font-size: 14px;
+        color: #555;
+        margin: 2px 0;
+        }
+
+        /* Preço */
+        .preco-livro {
+        font-size: 16px;
+        color: #27ae60;
+        font-weight: bold;
+        margin-top: 5px;
+        }
+
+        /* Livro caro (para usar via JS) */
+        .livro-caro {
+        background-color: #ffeaa7;
+        border: 2px solid #fdcb6e;
+        }
+
+        /* Livro sem estoque */
+        .sem-estoque {
+        background-color: #fab1a0;
+        border: 2px solid #e17055;
+        }
+
+        /* Categoria destaque */
+        .categoria {
+        font-size: 12px;
+        color: #fff;
+        background-color: #6c5ce7;
+        display: inline-block;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-top: 5px;
+        }
+
+        /* Imagem do livro */
+        .img-livro {
+        width: 120px;
+        height: auto;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        display: block;
+        margin-bottom: 8px;
+        }
+
+        /* Área de resumo */
+        .resumo {
+        background-color: #dfe6e9;
+        border: 2px solid #b2bec3;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Livraria do Cleitinho</h1>
+
+    <!-- atividade 1 : crie um livro usando apenas a manipulação do DOM com os métodos aquados e a estilização por classes -->
+    <!-- com base em um objeto monte um card para o livro seguindo o seguinte layout
+     { titulo: "O Código da Vinci", autor: "Dan Brown", ano: 2003, categoria: "Ficção", preco: 39.90, quantidadeEstoque: 12, versaoDigital: true, img: "https://placehold.co/200x400" }
+    
+    -->
+
+    <div class="container-livros" id="divPaiTodosLivros">
+
+        <!-- seguir esse exemplo para a criação de cada um dos livros do array -->
+        <div class="card-livro" id="livro1">
+            <img class="img-livro" src="https://placehold.co/200x400" alt="O Código da Vinci">
+            <h2 class="titulo-livro">O Código da Vinci</h2>
+            <p class="texto-livro autor">Dan Brown</p>
+            <p class="texto-livro ano">2003</p>
+            <p class="categoria">Ficção</p>
+            <p class="preco-livro">R$ 39,90</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        let livrosLivraria =  [
+            { titulo: "O Código da Vinci", autor: "Dan Brown", ano: 2003, categoria: "Ficção", preco: 39.90, quantidadeEstoque: 12, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "1984", autor: "George Orwell", ano: 1949, categoria: "Ficção", preco: 29.90, quantidadeEstoque: 8, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Dom Casmurro", autor: "Machado de Assis", ano: 1899, categoria: "Clássico", preco: 19.90, quantidadeEstoque: 5, versaoDigital: false, img: "https://placehold.co/200x400" },
+            { titulo: "O Hobbit", autor: "J.R.R. Tolkien", ano: 1937, categoria: "Fantasia", preco: 34.90, quantidadeEstoque: 10, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Harry Potter e a Pedra Filosofal", autor: "J.K. Rowling", ano: 1997, categoria: "Fantasia", preco: 44.90, quantidadeEstoque: 15, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "A Culpa é das Estrelas", autor: "John Green", ano: 2012, categoria: "Romance", preco: 27.90, quantidadeEstoque: 7, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", ano: 1943, categoria: "Infantil", preco: 22.90, quantidadeEstoque: 20, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Mindset", autor: "Carol Dweck", ano: 2006, categoria: "Desenvolvimento", preco: 32.90, quantidadeEstoque: 9, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Pai Rico, Pai Pobre", autor: "Robert Kiyosaki", ano: 1997, categoria: "Finanças", preco: 31.90, quantidadeEstoque: 11, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "A Revolução dos Bichos", autor: "George Orwell", ano: 1945, categoria: "Ficção", preco: 24.90, quantidadeEstoque: 6, versaoDigital: true, img: "https://placehold.co/200x400" },
+
+            { titulo: "Sapiens", autor: "Yuval Harari", ano: 2011, categoria: "História", preco: 49.90, quantidadeEstoque: 13, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Homo Deus", autor: "Yuval Harari", ano: 2015, categoria: "História", preco: 52.90, quantidadeEstoque: 10, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Alquimista", autor: "Paulo Coelho", ano: 1988, categoria: "Romance", preco: 25.90, quantidadeEstoque: 14, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Brida", autor: "Paulo Coelho", ano: 1990, categoria: "Romance", preco: 23.90, quantidadeEstoque: 6, versaoDigital: false, img: "https://placehold.co/200x400" },
+            { titulo: "It: A Coisa", autor: "Stephen King", ano: 1986, categoria: "Terror", preco: 59.90, quantidadeEstoque: 4, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Iluminado", autor: "Stephen King", ano: 1977, categoria: "Terror", preco: 42.90, quantidadeEstoque: 5, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Drácula", autor: "Bram Stoker", ano: 1897, categoria: "Terror", preco: 28.90, quantidadeEstoque: 7, versaoDigital: false, img: "https://placehold.co/200x400" },
+            { titulo: "Frankenstein", autor: "Mary Shelley", ano: 1818, categoria: "Clássico", preco: 26.90, quantidadeEstoque: 8, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Orgulho e Preconceito", autor: "Jane Austen", ano: 1813, categoria: "Romance", preco: 21.90, quantidadeEstoque: 10, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Emma", autor: "Jane Austen", ano: 1815, categoria: "Romance", preco: 23.90, quantidadeEstoque: 6, versaoDigital: false, img: "https://placehold.co/200x400" },
+
+            { titulo: "Clean Code", autor: "Robert C. Martin", ano: 2008, categoria: "Tecnologia", preco: 89.90, quantidadeEstoque: 5, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "JavaScript: O Guia Definitivo", autor: "David Flanagan", ano: 2020, categoria: "Tecnologia", preco: 99.90, quantidadeEstoque: 3, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Você Não Sabe JS", autor: "Kyle Simpson", ano: 2015, categoria: "Tecnologia", preco: 59.90, quantidadeEstoque: 7, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Algoritmos", autor: "Thomas Cormen", ano: 2009, categoria: "Tecnologia", preco: 120.00, quantidadeEstoque: 2, versaoDigital: false, img: "https://placehold.co/200x400" },
+            { titulo: "O Poder do Hábito", autor: "Charles Duhigg", ano: 2012, categoria: "Desenvolvimento", preco: 34.90, quantidadeEstoque: 9, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Essencialismo", autor: "Greg McKeown", ano: 2014, categoria: "Desenvolvimento", preco: 29.90, quantidadeEstoque: 11, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Atomic Habits", autor: "James Clear", ano: 2018, categoria: "Desenvolvimento", preco: 39.90, quantidadeEstoque: 13, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Milagre da Manhã", autor: "Hal Elrod", ano: 2012, categoria: "Desenvolvimento", preco: 27.90, quantidadeEstoque: 8, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "A Arte da Guerra", autor: "Sun Tzu", ano: -500, categoria: "Estratégia", preco: 19.90, quantidadeEstoque: 20, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Príncipe", autor: "Maquiavel", ano: 1532, categoria: "Política", preco: 21.90, quantidadeEstoque: 12, versaoDigital: false, img: "https://placehold.co/200x400" },
+
+            { titulo: "A Garota no Trem", autor: "Paula Hawkins", ano: 2015, categoria: "Suspense", preco: 32.90, quantidadeEstoque: 6, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Garota Exemplar", autor: "Gillian Flynn", ano: 2012, categoria: "Suspense", preco: 34.90, quantidadeEstoque: 5, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Silêncio dos Inocentes", autor: "Thomas Harris", ano: 1988, categoria: "Suspense", preco: 36.90, quantidadeEstoque: 4, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Percy Jackson", autor: "Rick Riordan", ano: 2005, categoria: "Fantasia", preco: 29.90, quantidadeEstoque: 18, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Jogos Vorazes", autor: "Suzanne Collins", ano: 2008, categoria: "Ficção", preco: 33.90, quantidadeEstoque: 14, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Duna", autor: "Frank Herbert", ano: 1965, categoria: "Ficção", preco: 45.90, quantidadeEstoque: 9, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Neuromancer", autor: "William Gibson", ano: 1984, categoria: "Ficção", preco: 37.90, quantidadeEstoque: 6, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Fahrenheit 451", autor: "Ray Bradbury", ano: 1953, categoria: "Ficção", preco: 28.90, quantidadeEstoque: 10, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Conto da Aia", autor: "Margaret Atwood", ano: 1985, categoria: "Ficção", preco: 31.90, quantidadeEstoque: 7, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "As Crônicas de Nárnia", autor: "C.S. Lewis", ano: 1950, categoria: "Fantasia", preco: 49.90, quantidadeEstoque: 12, versaoDigital: true, img: "https://placehold.co/200x400" },
+
+            { titulo: "Sherlock Holmes", autor: "Arthur Conan Doyle", ano: 1892, categoria: "Mistério", preco: 35.90, quantidadeEstoque: 8, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "O Nome do Vento", autor: "Patrick Rothfuss", ano: 2007, categoria: "Fantasia", preco: 42.90, quantidadeEstoque: 6, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "A Música do Silêncio", autor: "Patrick Rothfuss", ano: 2014, categoria: "Fantasia", preco: 24.90, quantidadeEstoque: 5, versaoDigital: false, img: "https://placehold.co/200x400" },
+            { titulo: "Inferno", autor: "Dan Brown", ano: 2013, categoria: "Ficção", preco: 39.90, quantidadeEstoque: 9, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Anjos e Demônios", autor: "Dan Brown", ano: 2000, categoria: "Ficção", preco: 34.90, quantidadeEstoque: 11, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Código Limpo para JavaScript", autor: "Ryan McDermott", ano: 2019, categoria: "Tecnologia", preco: 49.90, quantidadeEstoque: 7, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Refatoração", autor: "Martin Fowler", ano: 1999, categoria: "Tecnologia", preco: 79.90, quantidadeEstoque: 4, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Scrum", autor: "Jeff Sutherland", ano: 2014, categoria: "Negócios", preco: 29.90, quantidadeEstoque: 10, versaoDigital: true, img: "https://placehold.co/200x400" },
+            { titulo: "Startup Enxuta", autor: "Eric Ries", ano: 2011, categoria: "Negócios", preco: 34.90, quantidadeEstoque: 8, versaoDigital: true, img: "https://placehold.co/200x400" }
+        ];
+
+
+    </script>
+
+    
+</body>
+</html>
