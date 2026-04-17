@@ -10,3 +10,11 @@ itemEspecial.classList.add('azul')
 
 const tituloH2 = document.querySelectorAll('h2')[1]
 tituloH2.classList.remove('oculto')
+
+
+//método para criação:
+//let x = document.createElement('p')
+//adicionar o texto dentro do parágrafo
+//x.innerHTML = 'Parágrafo criado com createElement'
+//adicionar o parágrafo dentro do pai
+//elementoPai.appendChild(x)

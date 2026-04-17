@@ -188,6 +188,63 @@
         ];
 
 
+        //selecionar o elemento pai de todos os cards dos livros
+        const containerLivros = document.querySelector("#divPaiTodosLivros")
+
+        //selecionar o livro que será montado na página
+        let livro2 = livrosLivraria[1]
+
+        //criação dos elementos
+        //div>img>h2>p>p>p>p
+        let cardLivro = document.createElement('div')
+        let imgLivro = document.createElement('img')
+        let tituloLivro = document.createElement('h2')
+        let autorLivro = document.createElement('p')
+        let anoLivro = document.createElement('p')
+        let categoriaLivro = document.createElement('p')
+        let precoLivro = document.createElement('p')
+
+        //adição de conteúdo aos elementos
+
+        imgLivro.src = livro2.img
+        imgLivro.alt = livro2.titulo
+
+        //informações textuais
+        tituloLivro.innerHTML = livro2.titulo
+        autorLivro.innerHTML = livro2.autor
+        anoLivro.innerHTML = livro2.ano
+        categoriaLivro.innerHTML = livro2.categoria
+        precoLivro.innerHTML = `R$ ${livro2.preco}`
+
+        //estilização com adição das classes
+        imgLivro.classList.add('img-livro')
+        cardLivro.classList.add('card-livro')
+        tituloLivro.classList.add('titulo-livro')
+        autorLivro.classList.add('texto-livro', 'autor')
+        anoLivro.classList.add('texto-livro', 'ano')
+        categoriaLivro.classList.add('categoria')
+        precoLivro.classList.add('preco-livro')
+
+        //atruibuição dos filhos aos pais
+
+        //montando o card do livro
+        cardLivro.appendChild(imgLivro)
+        cardLivro.appendChild(tituloLivro)
+        cardLivro.appendChild(autorLivro)
+        cardLivro.appendChild(anoLivro)
+        cardLivro.appendChild(categoriaLivro)
+        cardLivro.appendChild(precoLivro)
+
+        //adicionar o card ao pai
+        containerLivros.appendChild(cardLivro)
+
+
+
+        //DESAFIO: liste todos os livros
+
+        //Teste fazer a renderização de apenas uma categoria ( da sua escolha). Dica: use o metodo .filter() para filtrar o array e depois o método .forEach() para percorrer o array e montar os cards.
+        
+
     </script>
 
     
