@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- função com parâmetro acionada pelo evento de click diretamente no html -->
+    <h1 onclick="minhaFuncao('Texto passado como parâmetro')">Eventos no DOM</h1>
+
+    <ul>
+        <li>Clique</li>
+        <li>Mouseover</li>
+        <li>Mouseout</li>
+        <li>Submit</li>
+    </ul>
+
+    <button id="btn">Clique aqui</button>
+
+    <div id="quadro">
+
+    </div>
+
+    <h1 id="textoAqui"></h1>
+
+    <form action="">
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+
+        <input type="checkbox" name="turnos" id="manha" value="manhã">
+        <label for="manha">Manhã</label>
+        <input type="checkbox" name="turnos" id="tarde" value="tarde">
+        <label for="tarde">Tarde</label>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
