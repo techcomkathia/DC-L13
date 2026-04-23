@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form, div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .oculta {
+            display: none;
+        }
+
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <form action="" id="cadastro">
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <input type="email" name="email" id="email" placeholder="Digite seu email">
+        <input type="text" name="cargo" id="cargo" placeholder="Digite seu cargo">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- ao cadastrar todas as informações elas devem ser mostradas nos campos abaixo -->
+
+    <div id="perfil" class="oculta">
+        <img src="https://placehold.co/60x40" alt="perfil" class="oculta">
+        <h1 id="nome"></h1>
+        <h2 id="cargo"></h2>
+        <h4 id="email"></h4>
+    </div>
+
+
+    <!-- dicas: para adicionar ou remover classes use a propriedade classList e o metodo add ou remove 
+    
+    os valores dos campos são acessados através da propriedade value, ex: nome.value, email.value, cargo.value
+
+    o preventDefault() é um método que evita a submissão do formulário após o clique no botão de submit. Depois de trabalhar com as informações do formulário, é possível limpar os campos atribuindo uma string vazia para a propriedade value, ex: nome.value = "" ou usando o método reset() do formulário, ex: cadastro.reset()
+    -->
+
+    
+
+
+    
+</body>
+</html>
