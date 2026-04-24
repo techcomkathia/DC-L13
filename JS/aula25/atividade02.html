@@ -30,16 +30,16 @@
 <body>
 
     <form action="" id="cadastro">
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-        <input type="email" name="email" id="email" placeholder="Digite seu email">
-        <input type="text" name="cargo" id="cargo" placeholder="Digite seu cargo">
+        <input type="text" name="nome" id="inputNome" placeholder="Digite seu nome">
+        <input type="email" name="email" id="inputEmail" placeholder="Digite seu email">
+        <input type="text" name="cargo" id="inputCargo" placeholder="Digite seu cargo">
         <input type="submit" value="Enviar">
     </form>
 
     <!-- ao cadastrar todas as informações elas devem ser mostradas nos campos abaixo -->
 
     <div id="perfil" class="oculta">
-        <img src="https://placehold.co/60x40" alt="perfil" class="oculta">
+        <img src="https://placehold.co/60x40" alt="perfil" class="oculta" id="imagemPerfil">
         <h1 id="nome"></h1>
         <h2 id="cargo"></h2>
         <h4 id="email"></h4>
@@ -52,6 +52,8 @@
 
     o preventDefault() é um método que evita a submissão do formulário após o clique no botão de submit. Depois de trabalhar com as informações do formulário, é possível limpar os campos atribuindo uma string vazia para a propriedade value, ex: nome.value = "" ou usando o método reset() do formulário, ex: cadastro.reset()
     -->
+
+    <script src="atividade02.js"></script>
 
     
 
