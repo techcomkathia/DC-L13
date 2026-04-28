@@ -1,6 +1,6 @@
 //utilizando a api VIA CEP para buscar informações de um cep e mostrar no console
 
-const cep = '01001000' //apenas numeros
+let cep = '01001000' //apenas numeros
 const endpointAPI = `https://viacep.com.br/ws/${cep}/json/`
 
 //fetch(url) e ele retorna uma promisse
