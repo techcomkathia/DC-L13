@@ -56,3 +56,8 @@ function mostrarCEP(){
     let cep = prompt('Digite o cep que deseja buscar, com apenas números e com 8 digitos')
     buscarCepAPI(cep)
 }
+
+// DESAFIO: faça com que o cep seja consultado a partir da captação dos números digitados pelo usuário em um input (number)
+//DICA: o evento submit do formulário pode ajudar nisso, mas lembre-se que o preventDefault() deve ser usado para evitar o comportamento padrão do formulário seja executado.
+// todas as vezes que o formulário for submetido antes de carregar as informações do cep na div, o conteudo da div deve ser limpo
+//EM CASO DE ERRO NA DIGITAÇÃO DO CEP: uma mensagem deve ser mostrada na parte inferior do formulário avisando o erro 
