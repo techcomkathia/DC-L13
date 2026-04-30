@@ -15,3 +15,28 @@ let produto = {
 
 //caso o status code seja da classe 200 mostre um alert com 'produto criado com sucesso'
 //caso o status code seja da classe 400 mostre um alert com 'erro ao criar o produto'
+
+function criarProduto(obj){
+   fetch('https://fakestoreapi.com/products/01',
+    {
+        method: 'POST',
+        headers:{'Content-Type': 'application/json'},
+        body: JSON.stringify(obj)
+    }
+    )
+    .then((resposta)=>{
+        if(resposta.status == 201){
+            alert('Produto Criado com Sucesso')
+            //opcionalmente converter a resposta em objeto js
+            return resposta.json()
+        }
+        else{
+            alert('Erro ao Criar o Produto')
+            throw new Error ('status code 400. Erro ao criar um produto')
+        }
+    })
+    .then((objetoRespota)=> console.log(objetoRespota))
+    .catch((erro)=> console.log(erro.message)) 
+}
+
+criarProduto(produto)
