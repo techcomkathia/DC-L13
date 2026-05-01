@@ -5,3 +5,38 @@
 // evento submit do formulário, no addEventListener(). A função de callback deve ser assíncrona, usando await pois a exclusão do produto pode demorar e a resposta para o usuário depende do sucesso ou falha da exclusão.
 
 //para fazer um função do tipo seta assíncrona, use a seguinte estrutura: async (parametros) => {...}
+
+const form = document.getElementById("delecao");
+const inputId = document.getElementById("idProduto");
+const mensagem = document.getElementById("mensagem");
+
+form.addEventListener('submit',
+    async(evento)=>{
+        //remoção do comportamento padrão do formulário
+        try{
+            evento.preventDefault();
+
+            const idProduto = inputId.value; //utilizar como parâmetro no fetch na API
+
+            const resposta = await fetch(`https://fakestoreapi.com/products/${idProduto}`, {
+                method: "DELETE"
+            });
+
+            //2 possibilidades de status code: 200 e 404
+            if(resposta.status == 200){
+                mensagem.innerText = "Produto excluido com sucesso"
+            }
+            else{
+                console.log(resposta.status)
+                mensagem.innerText = "Produto nao encontrado"
+            }
+
+            inputId.value = ""; //limpeza dos campos do formulário
+        }
+        catch(erro){
+            console.log(erro)
+            mensagem.innerText = "Erro ao excluir o produto"
+        }
+
+    }
+)
