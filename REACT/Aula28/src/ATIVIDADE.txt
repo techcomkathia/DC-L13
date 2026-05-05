@@ -1,0 +1,12 @@
+Atividade 1:
+
+-Crie uma aplicação em React com Vite ( Comando : npm create vite@latest)
+    *Siga todas as etapas no console:
+    -nome do projeto
+    -nome do package
+    -seleção do framework: React
+    -seleção da variante: javaScript
+    -instalação dos módulos e inicialização do servidor. 
+-Faça a criação da pasta componentes dentro da pasta src (projeto/src/componentes)
+-Crie um componente com um título, um parágrafo e uma lista não ordenada. Título: Aplicações em React. O parágrafo irá descrever brevemente o que são e a lista irá falar sobre pelo menos 3 benefícios. 
+-Exporte e utilize no componente App.jsx
