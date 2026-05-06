@@ -10,3 +10,15 @@ Atividade 1:
 -Faça a criação da pasta componentes dentro da pasta src (projeto/src/componentes)
 -Crie um componente com um título, um parágrafo e uma lista não ordenada. Título: Aplicações em React. O parágrafo irá descrever brevemente o que são e a lista irá falar sobre pelo menos 3 benefícios. 
 -Exporte e utilize no componente App.jsx
+
+
+
+Atividade 2:
+Represente o primeiro objeto do array com um desconto de 10%. 
+Detalhe, crie internamente ao componente da atividade 2 uma função chamada calcular valor com desconto, que recebe a porcentagem como parâmetro e retorna o valor final
+
+let produtos = [
+    { nome: "Maçã", preco: 4.50, categoria: "Frutas" },
+    { nome: "Banana", preco: 3.20, categoria: "Frutas" },
+    { nome: "Laranja", preco: 3.80, categoria: "Frutas" }
+]
