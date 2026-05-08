@@ -1,0 +1,11 @@
+.imagemProduto{
+    width: 200px;
+    height: 150px;
+    border: 2px solid red;
+}
+
+
+/* estilização por tag acaba afetando todo o documento, não apenas o componente */
+h2{
+    color: red;
+}
