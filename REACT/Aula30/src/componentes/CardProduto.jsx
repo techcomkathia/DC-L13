@@ -12,21 +12,47 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+import { useState } from 'react';
+
 function CardProduto({ imagem, nome, preco, descricao }) {
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src= {imagem} alt={nome} />
-      <Card.Body>
-        <Card.Title>{nome}</Card.Title>
-        <Card.Text>
-         {descricao}
-        </Card.Text>
-        <Card.Text>
-          R$ {preco}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  );
+
+    const [quantidade, setQuantidade] = useState(1)
+
+    //adicionar
+    function adicionar(){
+        if(quantidade >= 10){
+            return
+        }
+        setQuantidade(quantidade + 1)
+    }
+
+    //remover
+    function remover(){
+        if(quantidade <= 1){
+            return
+        }
+        setQuantidade(quantidade - 1)
+    }
+
+    return (
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src= {imagem} alt={nome} />
+        <Card.Body>
+            <Card.Title>{nome}</Card.Title>
+            <Card.Text>
+            {descricao}
+            </Card.Text>
+            <Card.Text>
+            R$ {preco}
+            </Card.Text>
+            <div className='d-flex flex-rowc justify-content-center gap-3'>
+                <Button onClick={()=>adicionar()} disabled={quantidade >= 10} variant="primary">+</Button>
+                <p> {quantidade} </p>
+                <Button onClick={()=>remover()} disabled={quantidade <= 1}>-</Button>
+            </div>
+        </Card.Body>
+        </Card>
+    );
 }
 
 export default CardProduto;

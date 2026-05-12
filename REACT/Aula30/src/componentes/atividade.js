@@ -12,6 +12,6 @@
 
 
 //------------------------ Atividade 2 ------------------------
-//Altere o componente CardProduto incluir dois botões. Esses botões terão o objetivo de incrementar e decrementar a quantidade de produtos. O valor inicial deve ser 1, quando o botão de incrementar for clicado, essa quantidade deve ser aumentada em 1 e quando o botão de decrementar for clicado essa quantidade deve ser diminuida em 1. 
+//Altere o componente CardProduto, incluindo dois botões. Esses botões terão o objetivo de incrementar e decrementar a quantidade de produtos. O valor inicial deve ser 1, quando o botão de incrementar for clicado, essa quantidade deve ser aumentada em 1 e quando o botão de decrementar for clicado essa quantidade deve ser diminuida em 1. 
 //Importante : o botão decrementar deve ser desabilitado quando a quantidade for 1, e o botão incrementar deve ser desabilitado quando a quantidade for 10.
 //DICA : use o hook useState para gerenciar o estado da quantidade de produtos. Para desabilitar o botão use o atributo disabled do botão.
