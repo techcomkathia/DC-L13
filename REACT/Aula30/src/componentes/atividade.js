@@ -15,3 +15,10 @@
 //Altere o componente CardProduto, incluindo dois botões. Esses botões terão o objetivo de incrementar e decrementar a quantidade de produtos. O valor inicial deve ser 1, quando o botão de incrementar for clicado, essa quantidade deve ser aumentada em 1 e quando o botão de decrementar for clicado essa quantidade deve ser diminuida em 1. 
 //Importante : o botão decrementar deve ser desabilitado quando a quantidade for 1, e o botão incrementar deve ser desabilitado quando a quantidade for 10.
 //DICA : use o hook useState para gerenciar o estado da quantidade de produtos. Para desabilitar o botão use o atributo disabled do botão.
+
+//------------------------ Atividade 3 ------------------------
+//Crie um componente chamado CadastroProduto. Esse componente será um formulario com os seguintes campos:
+//nome, preco, descricao e imagem. Um botão do type submit deverá montar um objeto com as informações passadas e mostra-lo no console.log.
+//DICA : use o hook useState para gerenciar cada um dos campos campos do formulario e adicionalmente uma variável de estado para controlar para o objeto que deverá ser mostrado no console.log
+//Para o evento onChange, faça a atribuição de valor aos campos do formulario 
+//Para o evento onSubmit, faça a atribuição de valor ao objeto que deverá ser mostrado no console.log
