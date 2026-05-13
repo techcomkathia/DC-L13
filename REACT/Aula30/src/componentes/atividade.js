@@ -25,3 +25,7 @@
 
 //---------------------Atividade 4 ----------------------
 //substitua a exibição das informações no console.log pelo uso do componente CardProduto
+
+
+//-----------------------Atividade 5------------------------
+//no componente CadastroProduto, utilize o conceito de renderização condicional para exibir o componente CardProduto quando um produto for cadastrado

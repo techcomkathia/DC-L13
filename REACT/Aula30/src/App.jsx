@@ -10,6 +10,7 @@ import { useState } from 'react'
 function App() {
   const [count, setCount] = useState(0)
   const [teste, setTeste] = useState('sou o valor inicial')
+  const [exibir, setExibir] = useState(true)
   
   function mudar(evento){
     setTeste(evento.target.value)
@@ -19,7 +20,9 @@ function App() {
   
   return (
     <>
-      <h1>Aula 30</h1>
+      {exibir && <h1>Aula 30</h1>}
+      <p>A renderização condicional considera qualquer valor iferente de false/undefinid/null como verdadeiro, ou seja se qualquer valor for verdadeiro seguido do && condicional, posteriormente o componente será renderizado</p>
+      <button onClick={() => {setExibir(!exibir)}}>Alterar</button>
       <div id='exemplos' className='ocultar'>
         <Botoes></Botoes>
 
@@ -38,6 +41,8 @@ function App() {
       </div>
 
       <CadastroProduto></CadastroProduto>
+
+      
 
       
     </>
