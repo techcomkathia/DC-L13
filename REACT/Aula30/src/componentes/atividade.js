@@ -22,3 +22,6 @@
 //DICA : use o hook useState para gerenciar cada um dos campos campos do formulario e adicionalmente uma variável de estado para controlar para o objeto que deverá ser mostrado no console.log
 //Para o evento onChange, faça a atribuição de valor aos campos do formulario 
 //Para o evento onSubmit, faça a atribuição de valor ao objeto que deverá ser mostrado no console.log
+
+//---------------------Atividade 4 ----------------------
+//substitua a exibição das informações no console.log pelo uso do componente CardProduto

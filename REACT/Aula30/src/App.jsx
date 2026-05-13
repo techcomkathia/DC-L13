@@ -3,6 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css' //folha de estilo 
 import Botoes from './componentes/Botoes'
 import CardProduto from './componentes/CardProduto'
 import { produtoExemplo } from './componentes/dados'
+import CadastroProduto from './componentes/CadastroProduto'
 
 import { useState } from 'react'
 
@@ -35,6 +36,8 @@ function App() {
        */}
        <p>{teste}</p>
       </div>
+
+      <CadastroProduto></CadastroProduto>
 
       
     </>
