@@ -7,6 +7,9 @@
 
 import { useState } from 'react'
 
+//importação do cardproduto
+import CardProduto from './CardProduto'
+
 export default function CadastroProduto() {
     //campos do formulário
     const [nome, setNome] = useState('')
@@ -15,6 +18,8 @@ export default function CadastroProduto() {
     const [imagem, setImagem] = useState('')
     //objeto produto, que deverá ser mostrado no console
     const [produto, setProduto] = useState({ nome: '', preco: '', descricao: '', imagem: '' })
+
+
 
     //função que será executada quando o formulário for enviado
     function cadastrar(e){
@@ -58,6 +63,8 @@ export default function CadastroProduto() {
 
             <button type='submit' >Cadastrar</button>
          </form>
+
+         <CardProduto imagem={produto.imagem} nome={produto.nome} preco={produto.preco} descricao={produto.descricao}></CardProduto>
         </>
     )
 
