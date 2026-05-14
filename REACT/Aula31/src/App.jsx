@@ -3,6 +3,7 @@ import './App.css'
 import EfeitoColateral from './componentes/EfeitoColateral'
 import ConsumoApi from './componentes/ConsumoApi'
 import { Exemplo2 } from './componentes/ConsumoApi'
+import ListagemProdutos from './componentes/ListagemProdutos'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <EfeitoColateral/>
       <ConsumoApi/>
       <Exemplo2/>
+      <ListagemProdutos/>
 
     </>
   )

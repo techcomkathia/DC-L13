@@ -27,7 +27,7 @@ export default function ConsumoApi() {
         </>
     )
  
-}  //ATIVIDADE: monte um componente que mostre todos os nomes de produtos da api The Fake Store garantindo que a chamada a api será executada apenas uma vez, na montagem do componente
+}
 
 
 export function Exemplo2(){
