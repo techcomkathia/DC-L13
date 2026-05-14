@@ -24,11 +24,18 @@ export default function ListagemProdutos() {
     }, [])
 
     return(
+        //retorno condicional : caso a lista de produtos esteja vazia, mostrar uma mensagem de carregamento, caso contrario, mostrar a lista
         <>
             <h1>Produtos</h1>
-            <ul>
-              {produtos.map(produto => <li key={produto.id}>{produto.title}</li>)}  
-            </ul>
+
+            {produtos.length === 0 && <p>Carregando...</p>}
+            
+            {/* ATIVIDADE2 : faça a instalação do react-bootstrap e bootstrap na sua aplicação, crie um componente  CardProduto. Use o componente Card do react-bootstrap. O componente CardProduto deve receber as seguintes propriedades: imagem, nome, preco e descricao e ser usado na renderização da lista de produtos abaixo  */}
+            { produtos.length > 0 &&
+                <ul>
+                    {produtos.map(produto => <li key={produto.id}>{produto.title}</li>)}
+                </ul>
+            }
             
         </>
     )
