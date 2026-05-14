@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import EfeitoColateral from './componentes/EfeitoColateral'
 import ConsumoApi from './componentes/ConsumoApi'
 import { Exemplo2 } from './componentes/ConsumoApi'
 import ListagemProdutos from './componentes/ListagemProdutos'
+
 
 function App() {
   const [count, setCount] = useState(0)
