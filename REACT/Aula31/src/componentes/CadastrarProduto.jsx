@@ -15,20 +15,50 @@ export default function CadastrarProduto() {
     const [preco, setPreco] = useState('');
     const [descricao, setDescricao] = useState('');
     const [imagem, setImagem] = useState('');
+    const [categoria, setCategoria] = useState('');
 
-    async function cadastrarProduto() {}
+    async function cadastrarProduto() {
+        setProduto({
+            title: nome,
+            price: preco,
+            description: descricao,
+            category: categoria,
+            image: imagem
+        })
+
+        try {
+            const resposta = await fetch('https://fakestoreapi.com/products', {
+                method: 'POST',
+                body: JSON.stringify(produto)
+            })
+            const produtoCadastrado = await resposta.json()
+            setMensagem('Produto cadastrado com sucesso')
+            console.log(produtoCadastrado)
+            //limpar os campos do formulario
+            setNome('')
+            setPreco('')
+            setDescricao('')
+            setImagem('')   
+            setCategoria('')
+            setProduto({})
+        } catch (erro) {
+            console.log(erro)
+            setMensagem('Erro ao cadastrar produto')
+        }
+    }
 
 
     return (
         <>
             <h1>Novo Produto</h1>
 
-            <input type="text" placeholder="nome"  />
-            <input type="number" placeholder="preco"  />
-            <input type="text" placeholder="descricao"  />
-            <input type="url" placeholder="imagem"  />
+            <input type="text" placeholder="nome"  onChange={(e)=> setNome(e.target.value)} value={nome} />
+            <input type="number" placeholder="preco" onChange={(e)=> setPreco(e.target.value) } value={preco} />
+            <input type="text" placeholder="descricao"  onChange={(e)=> setDescricao(e.target.value) } value={descricao} />
+            <input type="url" placeholder="imagem"  onChange={(e)=> setImagem(e.target.value) } value={imagem} />
+            <input type="text" placeholder="categoria"  onChange={(e)=> setCategoria(e.target.value) } value={categoria} />
 
-            <button>Cadastrar</button>
+            <button onClick={cadastrarProduto}>Cadastrar</button>
             {/* renderização condicional da mensagem */}
             {mensagem && <p>{mensagem}</p>}
         </>
