@@ -1,0 +1,2 @@
+1º passo - INSTALAR AS DEPENDÊNCIAS : npm install react-bootstrap bootstrap
+2º passo - importar a folha de estilo no arquivo App.jsx
