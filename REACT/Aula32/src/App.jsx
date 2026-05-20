@@ -1,11 +1,15 @@
 import './App.css'
 import ComponenteExemplo from './componentes/ComponenteExemplo'
 import { ComponenteComProps, ComponenteComPropsChildren } from './componentes/ComponenteExemplo'
+import ComponenteCondicional from './componentes/ComponenteCondicional'
+import ComponenteEstiloCondicional from './componentes/ComponenteEstiloCondicional'
 
 import CardProduto from './componentes/CardProduto' //ATIVIDADE 1
 
 //importação da folha de estilo do bootstrap (garante que as classes usadas pelo react-bootstrap sejam reconhecidas e façam a estilização correta)
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+
 
 function App() {
     const products = [
@@ -121,6 +125,15 @@ function App() {
           <p>Os beneficios de se ter um componente com children é que podemos utilizar para envelopar outros componentes ou tags de conteúdo já com uma estilização predefinida</p>
           <img src="https://placehold.co/600x400/blue/1F1F1F" alt="exemplo" />
       </ComponenteComPropsChildren>
+
+      <ComponenteCondicional imagem="https://placehold.co/600x400" titulo="Titulo" texto="Texto do produto"/>
+
+      <ComponenteCondicional imagem="https://placehold.co/600x400" titulo="Titulo 2" />
+
+      <ComponenteEstiloCondicional texto="Texto de descrição de alguma coisa. Esse componente recebeu o valor azul para a propriedade 'classe" classe="azul"/>
+
+      <ComponenteEstiloCondicional texto="Texto de descrição de alguma coisa. Esse componente recebeu o valor 
+      diferente de azul para a propriedade 'classe" classe="verde"/>
       </div>
 
       <div id='atividades'>

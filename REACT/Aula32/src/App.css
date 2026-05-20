@@ -187,3 +187,15 @@
   border: 2px solid red;
   padding: 10px;
 }
+
+.destaque{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
+
+.normal{
+  text-align: left;
+  color: blue;
+  font-size: 15px;
+}

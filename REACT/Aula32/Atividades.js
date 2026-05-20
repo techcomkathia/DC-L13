@@ -95,3 +95,7 @@ const products = [
     colors: ["#1F1F1F", "#474747", "#F5F5F5"]
   }
 ]
+
+
+// 2ª ATIVIDADE: crie o componente secao https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/main/doc/layout/section.png ele terá renderizações diferentes de acordo com as propriedades passadas. Ao receber o valor left para a propriedade titleAlign deverá aplicar o alinhamento a esquerda, caso o valor seja center o título deve ser alinhado ao centro. Caso a propriedade link seja informada, uma âncora/link deverá ser mostrada a direita do topo da seção.
+//Classes úteis do bootstrap:  text-left, text-center, text-right, text-justify,  text-lowercase, text-uppercase, text-capitalize
