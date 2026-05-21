@@ -16,7 +16,7 @@ export default function ConsumoAPI() {
     }
   }
 
-    useEffect(buscarDados, []) //executado apenas na montagem do componente.
+    useEffect(()=>{buscarDados()}, []) //executado apenas na montagem do componente.
 
   return(
     <div>

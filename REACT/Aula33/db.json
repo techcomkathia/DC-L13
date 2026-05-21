@@ -1,7 +1,7 @@
 {
   "livros": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Dom Casmurro",
       "autor": "Machado de Assis",
       "categoria": "Romance",
@@ -10,7 +10,7 @@
       "capa": "https://placehold.co/300x400?text=Dom+Casmurro"
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "O Hobbit",
       "autor": "J. R. R. Tolkien",
       "categoria": "Fantasia",
@@ -19,7 +19,7 @@
       "capa": "https://placehold.co/300x400?text=O+Hobbit"
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Clean Code",
       "autor": "Robert C. Martin",
       "categoria": "Tecnologia",
@@ -28,27 +28,39 @@
       "capa": "https://placehold.co/300x400?text=Clean+Code"
     }
   ],
-
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Maria Silva",
       "email": "maria@email.com",
       "telefone": "(85) 99999-9999",
       "ativo": true
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "João Souza",
       "email": "joao@email.com",
       "telefone": "(85) 98888-8888",
       "ativo": true
+    },
+    {
+      "nome": "cleitinho",
+      "email": "",
+      "telefone": "",
+      "ativo": true,
+      "id": "Jv_MDDjwcC0"
+    },
+    {
+      "nome": "teste",
+      "email": "teste@email",
+      "telefone": "63123123132123",
+      "ativo": true,
+      "id": "08f-xZQcdco"
     }
   ],
-
   "emprestimos": [
     {
-      "id": 1,
+      "id": "1",
       "usuarioId": 1,
       "livroId": 2,
       "dataEmprestimo": "2026-05-20",
@@ -56,12 +68,12 @@
       "status": "emprestado"
     }
   ],
-
   "favoritos": [
     {
-      "id": 1,
+      "id": "1",
       "usuarioId": 1,
       "livroId": 3
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
