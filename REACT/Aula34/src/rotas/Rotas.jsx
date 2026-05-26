@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom' //permite a criação de rotas, c
 import Home from '../paginas/Home'
 import Contato from '../paginas/Contato'
 import Sobre from '../paginas/Sobre'
+import PaginaNaoEntrada from '../paginas/PaginaNaoEntrada'
 //importação de todas as páginas para serem usadas nas rotas
 
 export default function Rotas() {
@@ -13,6 +14,7 @@ export default function Rotas() {
             <Route path='/' element={<Home/>}/>
             <Route path='/contato' element={<Contato/>}/>
             <Route path='/sobre' element={<Sobre/>}/>
+            <Route path='*' element={<PaginaNaoEntrada/>}/>
         </Routes>
     )
 
