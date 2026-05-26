@@ -26,6 +26,30 @@
       "ano": 2008,
       "disponivel": false,
       "capa": "https://placehold.co/300x400?text=Clean+Code"
+    },
+    {
+      "id": "b0RGlOxp4so",
+      "titulo": "titulo1 alterado manualmente",
+      "autor": "autor1",
+      "categoria": "categoria1",
+      "ano": "2026",
+      "capa": "https://placehold.co/600x400",
+      "disponivel": true
+    },
+    {
+      "id": "NsE9HdpYHQ0"
+    },
+    {
+      "id": "99u2c9K1CLI"
+    },
+    {
+      "titulo": "titulo1",
+      "autor": "autor1",
+      "categoria": "categoria1",
+      "ano": "2026",
+      "capa": "https://placehold.co/600x400",
+      "disponivel": true,
+      "id": "OLB-8rmNbBc"
     }
   ],
   "usuarios": [
