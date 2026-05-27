@@ -42,5 +42,100 @@
 /* A página home irá apresentar a loja com o conceito dos produtos. 
    A página produtos irá apresentar a lista de produtos, e cada produto será renderizado como um card do react bootstrap e no botão do card deverá ter um link para a página do produto, utilizando o componente LINK do react router dom, e passando o id do produto como parâmetro na rota.
    A página do produto (produtos/:id) irá apresentar as informações do produto, e para captar o parâmetro da rota, utilizamos o hook useParams do react router dom, que retorna um objeto com os parâmetros da rota, e podemos acessar o parâmetro id através do objeto params.id ou do useParams().id, e com esse id, podemos buscar as informações do produto no array de produtos e renderizar as informações do produto na página.
+   Caso o id do produto não seja encontrado no array de produtos, podemos renderizar uma mensagem de produto não encontrado ou redirecionar para a página de produtos.
 */
 
+const produtos = [
+  {
+    id: 1,
+    nome: "Nike Air Max Pulse",
+    descricao:
+      "Tênis esportivo moderno com amortecimento confortável e design urbano para uso casual e treinos leves.",
+    imagem:
+      "https://placehold.co/600x400/C92071/FFFFFF?text=Nike+Air+Max+Pulse",
+    preco: 899.9,
+    precoDesconto: 699.9,
+    detalhes: [
+      "https://placehold.co/600x400/C92071/FFFFFF?text=Vista+Frontal",
+      "https://placehold.co/600x400/B5B6F2/1F1F1F?text=Vista+Lateral",
+      "https://placehold.co/600x400/991956/FFFFFF?text=Vista+Traseira"
+    ],
+    marca: "Nike",
+    tamanhos: [38, 39, 40, 41, 42],
+    cores: ["#C92071", "#B5B6F2", "#991956"]
+  },
+
+  {
+    id: 2,
+    nome: "Adidas Ultraboost",
+    descricao:
+      "Tênis confortável com tecnologia de amortecimento responsivo ideal para caminhadas e corridas.",
+    imagem:
+      "https://placehold.co/600x400/B5B6F2/1F1F1F?text=Adidas+Ultraboost",
+    preco: 799.9,
+    precoDesconto: 649.9,
+    detalhes: [
+      "https://placehold.co/600x400/B5B6F2/1F1F1F?text=Vista+Frontal",
+      "https://placehold.co/600x400/F5F5F5/1F1F1F?text=Vista+Superior",
+      "https://placehold.co/600x400/474747/FFFFFF?text=Vista+da+Sola"
+    ],
+    marca: "Adidas",
+    tamanhos: [37, 38, 39, 40, 41],
+    cores: ["#B5B6F2", "#F5F5F5", "#474747"]
+  },
+
+  {
+    id: 3,
+    nome: "Puma RS-X",
+    descricao:
+     "Modelo com visual robusto e moderno, combinando conforto e estilo para o dia a dia.",
+    imagem:
+      "https://placehold.co/600x400/EE4266/FFFFFF?text=Puma+RS-X",
+    preco: 599.9,
+    precoDesconto: 449.9,
+    detalhes: [
+      "https://placehold.co/600x400/EE4266/FFFFFF?text=Vista+Frontal",
+      "https://placehold.co/600x400/F6AA1C/1F1F1F?text=Vista+Lateral",
+      "https://placehold.co/600x400/52CA76/FFFFFF?text=Vista+Traseira"
+    ],
+    marca: "Puma",
+    tamanhos: [36, 37, 38, 39, 40],
+    cores: ["#EE4266", "#F6AA1C", "#52CA76"]
+  },
+  {
+    id: 4,
+    nome: "New Balance 550",
+    descricao:
+      "Tênis clássico inspirado no basquete retrô, ideal para compor looks casuais modernos.",
+    imagem:
+      "https://placehold.co/600x400/52CA76/FFFFFF?text=New+Balance+550",
+    preco: 699.9,
+    precoDesconto: 579.9,
+    detalhes: [
+      "https://placehold.co/600x400/52CA76/FFFFFF?text=Vista+Frontal",
+      "https://placehold.co/600x400/CCCCCC/1F1F1F?text=Vista+Lateral",
+      "https://placehold.co/600x400/666666/FFFFFF?text=Vista+Traseira"
+    ],
+    marca: "New Balance",
+    tamanhos: [39, 40, 41, 42, 43],
+    cores: ["#52CA76", "#CCCCCC", "#666666"]
+  },
+  {
+    id: 5,
+    nome: "Converse Chuck Taylor",
+    descricao:
+      "Tênis icônico de cano baixo com visual casual e versátil para diferentes estilos.",
+    imagem:
+      "https://placehold.co/600x400/1F1F1F/FFFFFF?text=Converse+Chuck+Taylor",
+    preco: 299.9,
+    precoDesconto: 249.9,
+    detalhes: [
+      "https://placehold.co/600x400/1F1F1F/FFFFFF?text=Vista+Frontal",
+      "https://placehold.co/600x400/474747/FFFFFF?text=Vista+Lateral",
+      "https://placehold.co/600x400/F5F5F5/1F1F1F?text=Vista+Traseira"
+    ],
+    marca: "Converse",
+    tamanhos: [34, 35, 36, 37, 38],
+    cores: ["#1F1F1F", "#474747", "#F5F5F5"]
+  }
+]
