@@ -37,3 +37,10 @@
 //9º Passo: configuração do roteamento para renderizar as páginas dentro do template
 //(envolva o componente de rotas dentro do componente de template, para que todas as páginas sejam renderizadas )
 //10º Passo: coloque o tamplate dentro do componente de browser router, para que as rotas funcionem dentro do template com o uso do componente LINK)
+
+//-----------------Implementando a navegação com Rotas com parâmetros------------------
+/* A página home irá apresentar a loja com o conceito dos produtos. 
+   A página produtos irá apresentar a lista de produtos, e cada produto será renderizado como um card do react bootstrap e no botão do card deverá ter um link para a página do produto, utilizando o componente LINK do react router dom, e passando o id do produto como parâmetro na rota.
+   A página do produto (produtos/:id) irá apresentar as informações do produto, e para captar o parâmetro da rota, utilizamos o hook useParams do react router dom, que retorna um objeto com os parâmetros da rota, e podemos acessar o parâmetro id através do objeto params.id ou do useParams().id, e com esse id, podemos buscar as informações do produto no array de produtos e renderizar as informações do produto na página.
+*/
+
