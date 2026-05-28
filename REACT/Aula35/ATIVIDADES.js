@@ -9,3 +9,18 @@
 -Utilize o componente BarraNavegacao e Rotas no App.js. Não esqueça de utilizar o BrowserRouter para envolver os componentes Rotas e BarraNavegacao no componente App.js
 
 */
+
+/* ------------------------- ATIVIDADE2 -------------------------
+-Crie um arquivo chamado ProdutosContext.js na pasta contextos
+- Crie um ProdutosContext utilizando o createContext do React
+- Crie um componente ProdutosProvider que utilize o useState para armazenar a lista de produtos e as funções para: adicionarProduto, removerProduto e atualizarProduto (a partir do id do produto utilize o método find para encontrar o produto e atualizar ou remover fazendo a manipulação necessária com a função setProdutos)
+
+-Dica: Utilize o método find (para encontrar um produto) para manipular os produtos quando necessário encontrar um produto específico para atualizar ou remover
+-Para excluir use o método filter para criar uma nova lista de produtos sem o produto que deseja excluir
+-Para atualizar utilize o método map para criar uma nova lista de produtos, atualizando o produto que deseja atualizar e mantendo os outros produtos inalterados
+*/
+const produtos = [
+  { id: 1, nome: 'Produto 1', descricao: 'Descrição do Produto 1', preco: 10.99, imagem: 'https://placehold.co/600x400/C92071/FFFFFF' },
+  { id: 2, nome: 'Produto 2', descricao: 'Descrição do Produto 2', preco: 19.99, imagem: 'https://placehold.co/600x400/FF5733/FFFFFF' },
+  { id: 3, nome: 'Produto 3', descricao: 'Descrição do Produto 3', preco: 5.99, imagem: 'https://placehold.co/600x400/33FF57/FFFFFF' },
+];

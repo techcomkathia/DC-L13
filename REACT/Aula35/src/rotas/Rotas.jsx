@@ -5,7 +5,7 @@ import Produtos from '../paginas/Produtos'
 import DetalheProduto from '../paginas/DetalheProduto'
 import PaginaNaoEncontrada from '../paginas/PaginaNaoEncontrada'
 
-export default function Rotas() {
+export default function Rotas( ) {
     return (
 
         <Routes> 
