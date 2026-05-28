@@ -24,3 +24,15 @@ const produtos = [
   { id: 2, nome: 'Produto 2', descricao: 'Descrição do Produto 2', preco: 19.99, imagem: 'https://placehold.co/600x400/FF5733/FFFFFF' },
   { id: 3, nome: 'Produto 3', descricao: 'Descrição do Produto 3', preco: 5.99, imagem: 'https://placehold.co/600x400/33FF57/FFFFFF' },
 ];
+
+/*-------------------------- ATIVIDADE3 -------------------------
+---1ª Etapa: Criar o contexto de tema-------------
+-Crie o arquivo AppContext.jsx na pasta contextos
+-Crie um componente AppProvider que utilize os componentes ProdutosProvider e TemaProvider para envolver os children do AppProvider, permitindo que os contextos de produtos e tema sejam acessíveis em toda a aplicação
+-Utilize o componente AppProvider para envolver o componente App no arquivo main.jsx, garantindo que os contextos estejam disponíveis em toda a aplicação
+
+---2ª Etapa: Utilizar o contexto de produtos-------------
+-Crie o componente cardProduto para exibir as informações de cada produto, utilizando os dados do contexto de produtos para preencher as informações do card
+-Utilize o contexto de produtos para fazer a renderização das informações de todos os produtos na pagina de produtos, utilizando o componente cardProduto para exibir as informações de cada produto
+
+*/
