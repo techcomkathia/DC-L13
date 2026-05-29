@@ -37,10 +37,19 @@ const produtos = [
 
 */
 
-
 /*-------------------------- ATIVIDADE4 -------------------------
 Na página Home, crie um formulário para adicionar novos produtos, utilizando os campos: nome, descrição, preço e imagem (URL). Ao submeter o formulário, utilize a função adicionarProduto do contexto de produtos para adicionar o novo produto à lista de produtos. Certifique-se de que o novo produto seja renderizado na página de produtos após ser adicionado.
 
 Importante, quando um novo produto for adicionado faça uma mensagem aparecer na tela confirmando que o produto foi adicionado com sucesso. Você pode utilizar um estado local para controlar a exibição dessa mensagem, definindo-o como true quando o produto for adicionado e utilizando a função de controle de estado para exibir a mensagem na tela através de uma renderização condicional. 
+
+*/
+
+/*DESAFIO: NAVEGAÇÃO COM O USO DE PROPRIEDADES DA ROTA
+
+Modifique o card produto para que ele para que ele realize a navegação para a pagina de detalhes do produto quando o botão for clicado. Use o componente Link do React Router Dom para navegar para a pagina de detalhes do produto, montando a rota dinamicamente com o id do produto.
+
+
+Na página de detalhes do produto, utilize o parametro da rota para captar o id, e consumindo o contexto de produtos, localize o produto correspondente ao id e renderize as informações do produto na página.
+Use o hook useParams para captar o id da rota e o hook useContext para consumindo o contexto de produtos.
 
 */
