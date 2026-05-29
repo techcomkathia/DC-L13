@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Rotas from './rotas/Rotas'
 import BarraNavegacao from './componentes/BarraNavegacao'
 
@@ -8,12 +9,10 @@ import { useContext } from 'react'
 import { TemaContext } from './contextos/TemaContext'
 
 function App() {
-
   const { tema } = useContext(TemaContext)
-
   return (
     <>
-    <div style={tema}>
+    <div>
       <h1>Aula 35</h1>
      
       <BrowserRouter>

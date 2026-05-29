@@ -36,3 +36,11 @@ const produtos = [
 -Utilize o contexto de produtos para fazer a renderização das informações de todos os produtos na pagina de produtos, utilizando o componente cardProduto para exibir as informações de cada produto
 
 */
+
+
+/*-------------------------- ATIVIDADE4 -------------------------
+Na página Home, crie um formulário para adicionar novos produtos, utilizando os campos: nome, descrição, preço e imagem (URL). Ao submeter o formulário, utilize a função adicionarProduto do contexto de produtos para adicionar o novo produto à lista de produtos. Certifique-se de que o novo produto seja renderizado na página de produtos após ser adicionado.
+
+Importante, quando um novo produto for adicionado faça uma mensagem aparecer na tela confirmando que o produto foi adicionado com sucesso. Você pode utilizar um estado local para controlar a exibição dessa mensagem, definindo-o como true quando o produto for adicionado e utilizando a função de controle de estado para exibir a mensagem na tela através de uma renderização condicional. 
+
+*/
