@@ -1,0 +1,27 @@
+[
+	{
+		"id Fornecedor" : 1,
+		"Nome Fornecedor" : "Dell Technologies",
+		"Estado" : "SP"
+	},
+	{
+		"id Fornecedor" : 2,
+		"Nome Fornecedor" : "Logitech International",
+		"Estado" : "SP"
+	},
+	{
+		"id Fornecedor" : 3,
+		"Nome Fornecedor" : "Redragon Brasil",
+		"Estado" : "SP"
+	},
+	{
+		"id Fornecedor" : 4,
+		"Nome Fornecedor" : "Samsung Electronics",
+		"Estado" : "RJ"
+	},
+	{
+		"id Fornecedor" : 5,
+		"Nome Fornecedor" : "HyperX Gaming",
+		"Estado" : "SP"
+	}
+]

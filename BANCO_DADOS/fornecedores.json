@@ -1,0 +1,27 @@
+[
+	{
+		"codProd" : 1,
+		"nomeProdutor" : "Dell Technologies",
+		"uf" : "SP"
+	},
+	{
+		"codProd" : 2,
+		"nomeProdutor" : "Logitech International",
+		"uf" : "SP"
+	},
+	{
+		"codProd" : 3,
+		"nomeProdutor" : "Redragon Brasil",
+		"uf" : "SP"
+	},
+	{
+		"codProd" : 4,
+		"nomeProdutor" : "Samsung Electronics",
+		"uf" : "RJ"
+	},
+	{
+		"codProd" : 5,
+		"nomeProdutor" : "HyperX Gaming",
+		"uf" : "SP"
+	}
+]
