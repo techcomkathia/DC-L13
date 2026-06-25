@@ -100,7 +100,7 @@ Calcule o valor total do estoque fictício considerando que existem 10 unidades
 de cada produto.
 Dica: multiplicar preço por 10 antes de somar.
 
-Exercício 3 - AVG, MIN e MAX
+Exercício 3 - AVG, MIN e MAX (utilize group by)
 Exiba: preço médio dos produtos, menor preço, maior preço
 
 Exercício 4 - COUNT
@@ -108,6 +108,8 @@ Conte:
 a) Quantos clientes existem cadastrados.
 b) Quantos pedidos foram realizados.
 c) Quantos produtos existem cadastrados.
+
+
 
 Exercício 5 - GROUP BY
 Mostre quantos pedidos cada cliente realizou.

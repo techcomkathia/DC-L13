@@ -231,3 +231,168 @@ SELECT nome_produto,
        (preco_unitario * quantidade) AS total_venda
 FROM vendas;
 ```
+
+## 6 Filtrando Valores NULL com WHERE
+
+Além de contar valores nulos, também podemos filtrar registros que possuem ou não possuem valores em determinadas colunas.
+
+### 6.1 Selecionando Registros com Valores NULL
+
+Para localizar registros onde uma coluna não possui valor preenchido, utilize o operador `IS NULL`.
+
+```sql
+SELECT *
+FROM clientes
+WHERE telefone IS NULL;
+```
+
+Resultado esperado:
+
+| id | nome   | telefone |
+| -- | ------ | -------- |
+| 2  | Carlos | NULL     |
+| 4  | Pedro  | NULL     |
+
+---
+
+### 6.2 Selecionando Registros sem Valores NULL
+
+Para localizar registros que possuem valor preenchido, utilize `IS NOT NULL`.
+
+```sql
+SELECT *
+FROM clientes
+WHERE telefone IS NOT NULL;
+```
+
+Resultado esperado:
+
+| id | nome   | telefone   |
+| -- | ------ | ---------- |
+| 1  | Ana    | 99999-1111 |
+| 3  | Marina | 98888-2222 |
+
+
+
+## 7 Agregadores e Valores NULL
+
+Ao utilizar funções agregadoras no MySQL, é importante compreender como elas tratam os valores `NULL`. Na maioria dos casos, os agregadores **ignoram valores nulos**, o que pode influenciar diretamente os resultados das consultas.
+
+### 7.1 O que é NULL?
+
+O valor `NULL` representa a ausência de informação. Ele não é igual a zero (`0`) nem a uma string vazia (`''`).
+
+Exemplo:
+
+| id | nome   | telefone   |
+| -- | ------ | ---------- |
+| 1  | Ana    | 99999-1111 |
+| 2  | Carlos | NULL       |
+| 3  | Marina | 98888-2222 |
+| 4  | Pedro  | NULL       |
+
+---
+
+### 7.2 COUNT(*) x COUNT(coluna)
+
+A função `COUNT(*)` conta todas as linhas da tabela.
+
+```sql
+SELECT COUNT(*) AS total_registros
+FROM clientes;
+```
+
+Resultado:
+
+```text
+4
+```
+
+Já a função `COUNT(coluna)` conta apenas os registros em que a coluna possui valor preenchido.
+
+```sql
+SELECT COUNT(telefone) AS total_telefones
+FROM clientes;
+```
+
+Resultado:
+
+```text
+2
+```
+
+---
+
+### 7.3 Contando Valores Nulos
+
+Uma maneira simples de descobrir quantos registros possuem valores nulos é subtrair a quantidade de valores preenchidos da quantidade total de registros.
+
+```sql
+SELECT COUNT(*) - COUNT(telefone) AS total_nulos
+FROM clientes;
+```
+
+Outra opção é utilizar `SUM()` juntamente com `IS NULL`:
+
+```sql
+SELECT SUM(telefone IS NULL) AS total_nulos
+FROM clientes;
+```
+
+Ambas as consultas retornam a quantidade de registros cujo telefone não foi informado.
+
+---
+
+### 7.4 SUM() e Valores NULL
+
+A função `SUM()` ignora valores nulos durante o cálculo.
+
+```sql
+SELECT SUM(valor) AS total_vendas
+FROM vendas;
+```
+
+Se algum registro possuir valor `NULL`, ele não será considerado na soma.
+
+---
+
+### 7.5 AVG() e Valores NULL
+
+A função `AVG()` calcula a média apenas dos valores preenchidos.
+
+```sql
+SELECT AVG(preco) AS preco_medio
+FROM produtos;
+```
+
+Os registros com valor `NULL` são ignorados no cálculo da média.
+
+---
+
+### 7.6 MIN() e MAX()
+
+As funções `MIN()` e `MAX()` também desconsideram valores nulos.
+
+```sql
+SELECT
+    MIN(preco) AS menor_preco,
+    MAX(preco) AS maior_preco
+FROM produtos;
+```
+
+Somente os valores preenchidos serão avaliados para encontrar o menor e o maior valor.
+
+---
+
+###  Resumo
+
+| Função        | Considera valores NULL? |
+| ------------- | ----------------------- |
+| COUNT(*)      | Sim                     |
+| COUNT(coluna) | Não                     |
+| SUM()         | Não                     |
+| AVG()         | Não                     |
+| MIN()         | Não                     |
+| MAX()         | Não                     |
+
+> **Importante:** Ao analisar dados, é comum verificar a quantidade de valores nulos para identificar possíveis problemas de preenchimento ou inconsistências no banco de dados.
