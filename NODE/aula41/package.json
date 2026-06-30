@@ -1,0 +1,9 @@
+{
+  "name": "aula41",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {},
+  "scripts":{
+    "inicio" : "node main.js"
+  }
+}

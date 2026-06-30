@@ -1,5 +1,5 @@
-CREATE DATABASE loja_live13;
-USE loja_escola;
+CREATE DATABASE if not exists loja_live13;
+USE loja_live13;
 
 -- Clientes
 CREATE TABLE clientes (
@@ -109,8 +109,75 @@ a) Quantos clientes existem cadastrados.
 b) Quantos pedidos foram realizados.
 c) Quantos produtos existem cadastrados.
 
-
-
 Exercício 5 - GROUP BY
 Mostre quantos pedidos cada cliente realizou.
-Resultado esperado: Cliente - Quantidade de Pedidos*/
+Resultado esperado: Cliente - Quantidade de Pedidos
+
+Exercício 6 - GROUP BY, LEFT JOIN, COUNT e WHERE
+Mostre os clientes ainda não fizeram nenhum pedido
+where idPedido is null
+*/
+
+
+
+/*Exercício 1 - Coluna Calculada
+Liste o nome dos produtos, o preço unitário e o preço com aumento de 10%.
+Colunas desejadas: nome, preco, preco_com_aumento*/
+
+select nome, preco, preco*1.1 as preco_com_aumento
+from produtos;
+
+/*Exercício 2 - SUM
+Calcule o valor total do estoque fictício considerando que existem 10 unidades 
+de cada produto.
+Dica: multiplicar preço por 10 antes de somar.*/
+-- total
+select sum(preco * 10)as preco_total
+from produtos;
+
+-- total por categoria
+select categorias.nome, sum(produtos.preco * 10)as preco_total
+from produtos
+inner join categorias
+	on produtos.categoria_id = categorias.id
+group by categorias.nome;
+
+/*Exercício 3 - AVG, MIN e MAX (utilize group by)
+Exiba: preço médio dos produtos, menor preço, maior preço*/
+
+select nome , avg(preco) as 'média', 
+	min(preco) as 'menor preço', 
+	max(preco) as 'maior preco'
+from produtos
+group by nome;
+
+select categorias.nome , avg(produtos.preco) as 'média', 
+	min(preco) as 'menor preço', 
+	max(preco) as 'maior preco'
+from produtos
+inner join categorias
+	on produtos.categoria_id = categorias.id
+group by categorias.nome;
+
+
+/*Exercício 4 - COUNT
+Conte: 
+a) Quantos clientes existem cadastrados.
+b) Quantos pedidos foram realizados.
+c) Quantos produtos existem cadastrados.*/
+
+select count(*) as 'quantidade clientes'
+from clientes;
+
+select count(*) as 'quantidade pedidos '
+from pedidos;
+
+select count(*) as 'quantidade produtos cadastrados'
+from produtos;
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+{"frutas":[
+    {"id":1,"nome":"Banana"},
+    {"id":2,"nome":"Maça"},
+    {"id":3,"nome":"Laranja"}
+    ],
+"legumes":[
+    {"id":1,"nome":"Cenoura"},
+    {"id":2,"nome":"batata"}
+    ]
+}
