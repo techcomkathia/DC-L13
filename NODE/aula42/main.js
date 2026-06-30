@@ -17,8 +17,59 @@ const servidor =  http.createServer((req, res) => {
     //configurar o tipo de conteúdo a ser devolvido
     //primeiro parâmetro o código de status, segundo parâmetro um objeto com o cabeçalho do tipo da resposta
     res.writeHead(200, {'Content-Type': 'application/json'});
-    res.write(JSON.stringify({nome: 'cleitinho', raca: 'gato laranja'}))
-    res.end();
+    //identificar rotas diferentes
+    const url = req.url;
+    if(req.method == 'GET'){
+        switch(url){
+        case '/':
+            res.end(JSON.stringify({
+                mensagem: 'Bem-vindo a minha API de frutas',
+                frutas: banco.frutas.length,
+                legumes: banco.legumes.length,
+                versao: '1.0.0',
+                autor: 'Cleitinho'
+            }));
+            return
+            
+        case '/frutas':
+            res.end(JSON.stringify(banco.frutas));
+            return
+            
+        case '/legumes':
+            res.end(JSON.stringify(banco.legumes));
+            return
+        default:
+            res.end('Nenhuma rota encontrada');
+            return
+        }
+
+    }
+    //rota para adicionar frutas
+    else if(req.method == 'POST' && url == '/frutas'){
+        //adicionando o conteúdo da requisição aos dados do banco
+        req.on('data', (dadosReq) =>{
+            const dados = JSON.parse(dadosReq)// convertendo o conteúdo da requisição em um objeto
+            banco.frutas.push({...dados, id: banco.frutas.length + 1}) //destruturando o array que vem da requisição e adicionando ao array de frutas do banco
+            console.log(banco.frutas)
+        })
+        // quando a requisição acabar mostrar o novo estado do banco
+        req.on('end', () => {
+            res.end(JSON.stringify({
+              mensagem: 'Fruta adicionada com sucesso',
+              frutas:banco.frutas
+            })); //resposta do servidor enviamos o 'NOVO' estado do banco com os dados
+        })
+       
+        return
+    }
+    //demais rotas e metodos
+    else{
+        res.end('Nenhuma rota encontrada para esse método');
+        return
+    }
+
+    //finalizando a requisição
+   ;
 })
 
 //iniciar o servidor

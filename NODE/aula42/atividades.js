@@ -43,3 +43,16 @@ const db ={
 //Dica use o módulo fs para ler o json e o módulo http para criar o servidor
 
 
+/*
+2- crie duas rotas post : /usuarios e /produtos, para criar novos usuarios e produtos respectivamente.
+a resposta deverá ser no seguinte formato:
+{
+"mensagem": "Sucesso ao criar o novo usuario/produto"
+"usuarioCriado" : {
+    //informações do novo usuario ou produto
+},
+"status": 200
+}
+*/
+
+
