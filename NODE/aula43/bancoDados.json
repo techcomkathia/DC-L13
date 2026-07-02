@@ -1,0 +1,471 @@
+{
+    "funcionarios":
+    [
+    {
+        "id": "12345678901",
+        "nome": "Ana Souza",
+        "idade": 25,
+        "email": "ana.souza@empresa.com",
+        "senha": "Ana@123",
+        "cnh": true,
+        "setor": "Financeiro",
+        "cargo": "Analista",
+        "podeDirigir": true
+    },
+    {
+        "id": "23456789012",
+        "nome": "Carlos Lima",
+        "idade": 17,
+        "email": "carlos.lima@empresa.com",
+        "senha": "Carlos123",
+        "cnh": false,
+        "setor": "TI",
+        "cargo": "Estagiário",
+        "podeDirigir": false
+    },
+    {
+        "id": "34567890123",
+        "nome": "Mariana Alves",
+        "idade": 30,
+        "email": "mariana.alves@empresa.com",
+        "senha": "Mari@2024",
+        "cnh": true,
+        "setor": "RH",
+        "cargo": "Coordenadora",
+        "podeDirigir": true
+    },
+    {
+        "id": "45678901234",
+        "nome": "João Pedro",
+        "idade": 22,
+        "email": "joao.pedro@empresa.com",
+        "senha": "Joao123",
+        "cnh": false,
+        "setor": "Logística",
+        "cargo": "Assistente",
+        "podeDirigir": false
+    },
+    {
+        "id": "56789012345",
+        "nome": "Fernanda Rocha",
+        "idade": 19,
+        "email": "fernanda.rocha@empresa.com",
+        "senha": "Fer@123",
+        "cnh": true,
+        "setor": "Marketing",
+        "cargo": "Analista",
+        "podeDirigir": true
+    },
+    {
+        "id": "67890123456",
+        "nome": "Lucas Martins",
+        "idade": 16,
+        "email": "lucas.martins@empresa.com",
+        "senha": "Lucas123",
+        "cnh": false,
+        "setor": "TI",
+        "cargo": "Jovem Aprendiz",
+        "podeDirigir": false
+    },
+    {
+        "id": "78901234567",
+        "nome": "Patrícia Gomes",
+        "idade": 40,
+        "email": "patricia.gomes@empresa.com",
+        "senha": "Patricia@01",
+        "cnh": true,
+        "setor": "Financeiro",
+        "cargo": "Gerente",
+        "podeDirigir": true
+    },
+    {
+        "id": "89012345678",
+        "nome": "Rafael Costa",
+        "idade": 28,
+        "email": "rafael.costa@empresa.com",
+        "senha": "Rafael321",
+        "cnh": true,
+        "setor": "Comercial",
+        "cargo": "Vendedor",
+        "podeDirigir": true
+    },
+    {
+        "id": "90123456789",
+        "nome": "Juliana Mendes",
+        "idade": 18,
+        "email": "juliana.mendes@empresa.com",
+        "senha": "Juliana123",
+        "cnh": false,
+        "setor": "RH",
+        "cargo": "Assistente",
+        "podeDirigir": false
+    },
+    {
+        "id": "11223344556",
+        "nome": "Bruno Carvalho",
+        "idade": 35,
+        "email": "bruno.carvalho@empresa.com",
+        "senha": "Bruno@2025",
+        "cnh": true,
+        "setor": "Logística",
+        "cargo": "Supervisor",
+        "podeDirigir": true
+    },
+    {
+        "id": "22334455667",
+        "nome": "Camila Ribeiro",
+        "idade": 21,
+        "email": "camila.ribeiro@empresa.com",
+        "senha": "Camila123",
+        "cnh": false,
+        "setor": "Marketing",
+        "cargo": "Social Media",
+        "podeDirigir": false
+    },
+    {
+        "id": "33445566778",
+        "nome": "Eduardo Nunes",
+        "idade": 45,
+        "email": "eduardo.nunes@empresa.com",
+        "senha": "Edu@Diretor",
+        "cnh": true,
+        "setor": "Diretoria",
+        "cargo": "Diretor",
+        "podeDirigir": true
+    },
+    {
+        "id": "44556677889",
+        "nome": "Beatriz Oliveira",
+        "idade": 29,
+        "email": "beatriz.oliveira@empresa.com",
+        "senha": "Bea@456",
+        "cnh": true,
+        "setor": "Comercial",
+        "cargo": "Consultora",
+        "podeDirigir": true
+    },
+    {
+        "id": "55667788990",
+        "nome": "Diego Fernandes",
+        "idade": 33,
+        "email": "diego.fernandes@empresa.com",
+        "senha": "Diego123",
+        "cnh": true,
+        "setor": "TI",
+        "cargo": "Desenvolvedor",
+        "podeDirigir": true
+    },
+    {
+        "id": "66778899001",
+        "nome": "Larissa Costa",
+        "idade": 26,
+        "email": "larissa.costa@empresa.com",
+        "senha": "Lari@321",
+        "cnh": false,
+        "setor": "RH",
+        "cargo": "Recrutadora",
+        "podeDirigir": false
+    },
+    {
+        "id": "77889900112",
+        "nome": "Gabriel Santos",
+        "idade": 31,
+        "email": "gabriel.santos@empresa.com",
+        "senha": "Gabriel2025",
+        "cnh": true,
+        "setor": "Logística",
+        "cargo": "Motorista",
+        "podeDirigir": true
+    },
+    {
+        "id": "88990011223",
+        "nome": "Renata Silva",
+        "idade": 24,
+        "email": "renata.silva@empresa.com",
+        "senha": "Renata@12",
+        "cnh": true,
+        "setor": "Marketing",
+        "cargo": "Designer",
+        "podeDirigir": true
+    },
+    {
+        "id": "99001122334",
+        "nome": "Thiago Moraes",
+        "idade": 27,
+        "email": "thiago.moraes@empresa.com",
+        "senha": "Thiago987",
+        "cnh": false,
+        "setor": "Financeiro",
+        "cargo": "Assistente Financeiro",
+        "podeDirigir": false
+    },
+    {
+        "id": "10111213141",
+        "nome": "Vanessa Almeida",
+        "idade": 38,
+        "email": "vanessa.almeida@empresa.com",
+        "senha": "Vanessa@01",
+        "cnh": true,
+        "setor": "Jurídico",
+        "cargo": "Advogada",
+        "podeDirigir": true
+    },
+    {
+        "id": "12131415161",
+        "nome": "Ricardo Barros",
+        "idade": 42,
+        "email": "ricardo.barros@empresa.com",
+        "senha": "Ricardo321",
+        "cnh": true,
+        "setor": "Compras",
+        "cargo": "Comprador",
+        "podeDirigir": true
+    }
+    ],
+    "produtos":
+    [
+        {
+            "id": 1,
+            "nome": "Notebook Dell Inspiron",
+            "departamento": "Eletrônicos",
+            "descricao": "Notebook Intel Core i5, 16GB RAM, SSD 512GB",
+            "preco": 4299.90,
+            "quantidade": 8
+        },
+        {
+            "id": 2,
+            "nome": "Smartphone Galaxy A56",
+            "departamento": "Eletrônicos",
+            "descricao": "Tela AMOLED 6.7\", 256GB de armazenamento",
+            "preco": 2399.90,
+            "quantidade": 15
+        },
+        {
+            "id": 3,
+            "nome": "Smart TV 50\" 4K",
+            "departamento": "Eletrônicos",
+            "descricao": "TV LED 4K com sistema Android",
+            "preco": 2899.90,
+            "quantidade": 6
+        },
+        {
+            "id": 4,
+            "nome": "Sofá Retrátil",
+            "departamento": "Móveis",
+            "descricao": "Sofá retrátil de 3 lugares em tecido suede",
+            "preco": 1999.90,
+            "quantidade": 4
+        },
+        {
+            "id": 5,
+            "nome": "Mesa de Jantar",
+            "departamento": "Móveis",
+            "descricao": "Mesa de madeira para 6 lugares",
+            "preco": 1499.90,
+            "quantidade": 7
+        },
+        {
+            "id": 6,
+            "nome": "Guarda-Roupa Casal",
+            "departamento": "Móveis",
+            "descricao": "Guarda-roupa 6 portas com espelho",
+            "preco": 2399.90,
+            "quantidade": 3
+        },
+        {
+            "id": 7,
+            "nome": "Camiseta Básica",
+            "departamento": "Vestuário",
+            "descricao": "Camiseta de algodão unissex",
+            "preco": 49.90,
+            "quantidade": 120
+        },
+        {
+            "id": 8,
+            "nome": "Calça Jeans",
+            "departamento": "Vestuário",
+            "descricao": "Calça jeans masculina slim",
+            "preco": 149.90,
+            "quantidade": 45
+        },
+        {
+            "id": 9,
+            "nome": "Jaqueta Corta-Vento",
+            "departamento": "Vestuário",
+            "descricao": "Jaqueta impermeável com capuz",
+            "preco": 229.90,
+            "quantidade": 18
+        },
+        {
+            "id": 10,
+            "nome": "Tênis Esportivo",
+            "departamento": "Calçados",
+            "descricao": "Tênis para corrida com amortecimento",
+            "preco": 349.90,
+            "quantidade": 30
+        },
+        {
+            "id": 11,
+            "nome": "Bota de Couro",
+            "departamento": "Calçados",
+            "descricao": "Bota masculina em couro legítimo",
+            "preco": 499.90,
+            "quantidade": 12
+        },
+        {
+            "id": 12,
+            "nome": "Sandália Feminina",
+            "departamento": "Calçados",
+            "descricao": "Sandália de salto bloco",
+            "preco": 189.90,
+            "quantidade": 25
+        },
+        {
+            "id": 13,
+            "nome": "Arroz 5kg",
+            "departamento": "Alimentos",
+            "descricao": "Arroz tipo 1",
+            "preco": 32.90,
+            "quantidade": 80
+        },
+        {
+            "id": 14,
+            "nome": "Café Torrado 500g",
+            "departamento": "Alimentos",
+            "descricao": "Café tradicional torrado e moído",
+            "preco": 24.90,
+            "quantidade": 60
+        },
+        {
+            "id": 15,
+            "nome": "Azeite de Oliva 500ml",
+            "departamento": "Alimentos",
+            "descricao": "Azeite extravirgem",
+            "preco": 39.90,
+            "quantidade": 35
+        },
+        {
+            "id": 16,
+            "nome": "Furadeira de Impacto",
+            "departamento": "Ferramentas",
+            "descricao": "Furadeira 750W com maleta",
+            "preco": 329.90,
+            "quantidade": 14
+        },
+        {
+            "id": 17,
+            "nome": "Jogo de Chaves",
+            "departamento": "Ferramentas",
+            "descricao": "Kit com 46 peças",
+            "preco": 159.90,
+            "quantidade": 20
+        },
+        {
+            "id": 18,
+            "nome": "Martelo 27mm",
+            "departamento": "Ferramentas",
+            "descricao": "Martelo com cabo em fibra",
+            "preco": 59.90,
+            "quantidade": 32
+        },
+        {
+            "id": 19,
+            "nome": "Bola de Futebol",
+            "departamento": "Esportes",
+            "descricao": "Bola oficial tamanho 5",
+            "preco": 129.90,
+            "quantidade": 22
+        },
+        {
+            "id": 20,
+            "nome": "Garrafa Térmica 1L",
+            "departamento": "Utilidades",
+            "descricao": "Garrafa térmica em inox",
+            "preco": 89.90,
+            "quantidade": 40
+        }
+    ],
+    "unidades":
+    [
+        {
+            "id": 1,
+            "nome": "Unidade Centro",
+            "endereco": "Av. Dom Manuel, 1200 - Centro, Fortaleza - CE",
+            "telefone": "(85) 3210-4500",
+            "email": "centro@empresa.com",
+            "responsavel": "Mariana Alves"
+        },
+        {
+            "id": 2,
+            "nome": "Unidade Aldeota",
+            "endereco": "Av. Santos Dumont, 2150 - Aldeota, Fortaleza - CE",
+            "telefone": "(85) 3210-4501",
+            "email": "aldeota@empresa.com",
+            "responsavel": "Patrícia Gomes"
+        },
+        {
+            "id": 3,
+            "nome": "Unidade Parquelândia",
+            "endereco": "Rua Gustavo Sampaio, 980 - Parquelândia, Fortaleza - CE",
+            "telefone": "(85) 3210-4502",
+            "email": "parquelandia@empresa.com",
+            "responsavel": "Eduardo Nunes"
+        },
+        {
+            "id": 4,
+            "nome": "Unidade Messejana",
+            "endereco": "Av. Frei Cirilo, 1450 - Messejana, Fortaleza - CE",
+            "telefone": "(85) 3210-4503",
+            "email": "messejana@empresa.com",
+            "responsavel": "Bruno Carvalho"
+        },
+        {
+            "id": 5,
+            "nome": "Unidade Maracanaú",
+            "endereco": "Av. I, 350 - Jereissati I, Maracanaú - CE",
+            "telefone": "(85) 3210-4504",
+            "email": "maracanau@empresa.com",
+            "responsavel": "Rafael Costa"
+        },
+        {
+            "id": 6,
+            "nome": "Unidade Caucaia",
+            "endereco": "Rua Coronel Correia, 820 - Centro, Caucaia - CE",
+            "telefone": "(85) 3210-4505",
+            "email": "caucaia@empresa.com",
+            "responsavel": "Fernanda Rocha"
+        },
+        {
+            "id": 7,
+            "nome": "Unidade Eusébio",
+            "endereco": "Av. Eusébio de Queiroz, 1125 - Centro, Eusébio - CE",
+            "telefone": "(85) 3210-4506",
+            "email": "eusebio@empresa.com",
+            "responsavel": "Vanessa Almeida"
+        },
+        {
+            "id": 8,
+            "nome": "Unidade Sobral",
+            "endereco": "Av. Dom José, 430 - Centro, Sobral - CE",
+            "telefone": "(88) 3611-4507",
+            "email": "sobral@empresa.com",
+            "responsavel": "Ricardo Barros"
+        },
+        {
+            "id": 9,
+            "nome": "Unidade Juazeiro do Norte",
+            "endereco": "Av. Padre Cícero, 2150 - Triângulo, Juazeiro do Norte - CE",
+            "telefone": "(88) 3571-4508",
+            "email": "juazeiro@empresa.com",
+            "responsavel": "Beatriz Oliveira"
+        },
+        {
+            "id": 10,
+            "nome": "Unidade Iguatu",
+            "endereco": "Rua Floriano Peixoto, 640 - Centro, Iguatu - CE",
+            "telefone": "(88) 3581-4509",
+            "email": "iguatu@empresa.com",
+            "responsavel": "Diego Fernandes"
+        }
+    ]
+}
