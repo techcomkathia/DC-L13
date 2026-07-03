@@ -2,9 +2,9 @@
 const express = require('express');
 const db = {
     frutas:[
-        {id: 1, nome: 'Banana', preco: 2.5},
-        {id: 2, nome: 'Maçã', preco: 3.0},
-        {id: 3, nome: 'Laranja', preco: 4.0},
+        {id: 1, nome: 'Banana', preco: 2.5, tipo: 'não citrica', estado: 'madura'},
+        {id: 2, nome: 'Maçã', preco: 3.0, tipo: 'não citrica', estado: 'verde'},
+        {id: 3, nome: 'Laranja', preco: 4.0 , tipo: 'citrica', estado: 'madura'},
     ],
     legumes:[
         {id: 1, nome: 'Cenoura', preco: 2.5},
@@ -33,13 +33,54 @@ app.get('/', (requisicao, resposta) => {
 })
 
 app.get('/frutas', (requisicao, resposta) => {
+    //incluindo parâmetros de consulta
+    const {tipo,estado} = requisicao.query; //desestruturando os parâmetros de consulta da requisição
+
+    let respostaDados = db.frutas
+
+    //caso o usuário queira filtrar por tipo
+    if(tipo){
+        respostaDados = respostaDados.filter(f => f.tipo == tipo);
+    }
+    //caso o usuário queira filtrar por estado
+    if(estado){
+        respostaDados = respostaDados.filter(f => f.estado == estado);
+    }
     resposta.status(200);
     resposta.json({
-        qtdFrutas: db.frutas.length,
-        frutas: db.frutas,
+        qtdFrutas: respostaDados.length,
+        frutas: respostaDados,
         data: new Date()
     });
     resposta.end();
+})
+//para fazer uma requisição com parâmetros de consulta, o usuário deve enviar a requisição no seguinte formato:
+// http://localhost:3000/frutas?tipo=citrica&estado=madura
+
+app.get('/frutas/:id', (requisicao, resposta) => {
+    const id = parseInt(requisicao.params.id);
+    const fruta = db.frutas.find(f => f.id == id);
+    //tratar a resposta
+    if(fruta){
+        //sucesso
+        resposta.status(200);
+        resposta.json({
+            fruta: fruta,
+            mensagem: 'Fruta encontrada com sucesso!',
+            status: 200
+        });
+        resposta.end();
+    }
+    else{
+        //erro
+        resposta.status(404);
+        resposta.json({
+            mensagem: 'Fruta não encontrada!',
+            status: 404
+        });
+        resposta.end();
+    }
+    
 })
 
 app.listen(3000, () => {
