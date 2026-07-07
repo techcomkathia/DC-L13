@@ -195,3 +195,52 @@ mensagem de erro :
 }
 
 ```
+
+
+
+### Rota para cadastro de uma nova unidade
+
+Faça uma rota do método POST para unidades, utilizando o tratamento de erro com try catch, onde o erro do sistema terá o seguinte formato:
+```json
+{
+  "mensagem": "erro ao criar unidade",
+  "Status": 500,
+  "erro" : erro.message
+}
+
+```
+
+Em caso de sucesso na requisição fazer a validação dos campos obrigatórios: nome, endereço e telefone. 
+
+Formato do corpo da requisição esperada:
+```json
+
+{
+      
+      "nome": "Unidade Aldeota",
+      "endereco": "Rua Aldeota, 102",
+      "telefone": "(85)3000-1002"
+    }
+
+```
+
+mensagem de sucesso :
+
+```json
+{
+  "mensagem": "sucesso, unidade criada",
+  "Status": 201
+}
+
+```
+
+mensagem de erro :
+
+```json
+{
+  "mensagem": "erro ao criar unidade ",
+  "Status": 400,
+  "erro": "ausência dos atributos obrigatórios: listar atributos aqui"
+}
+
+```

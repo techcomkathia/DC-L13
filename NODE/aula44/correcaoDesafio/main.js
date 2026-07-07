@@ -1,4 +1,5 @@
 //importação dos módulos
+const { error } = require('console')
 const express = require('express')
 const fs = require('fs')
 
@@ -8,6 +9,7 @@ const dadosBanco = JSON.parse(fs.readFileSync('dbEscola.json', 'utf-8'))
 //criação das rotas
 //1º passo: instancia do express
 const app = express() 
+app.use(express.json())
 
 //2ª passo: criação das rotas
 app.get('/', (req, res) => {
@@ -108,6 +110,86 @@ app.get('/alunos/:id', (req, res) => {
     })
     res.end()
 })
+//-----------------------------------------------------------------------------
+
+
+app.post('/alunos', (req, res) => {
+
+    try{
+        const alunoInformado = {
+            email: req.body.email || null,
+            senha: req.body.senha || null,
+            nome: req.body.nome || null,
+            endereco: req.body.endereco || null,
+            telefone: req.body.telefone || null,
+            curso: req.body.curso || null,
+            disciplinasCursadas: req.body.disciplinasCursadas || null
+        }
+        const camposObrigatorios = [ "email",  "senha","nome", "endereco", "telefone","curso","disciplinasCursadas" ]
+
+        const atributosNaoInformados = camposObrigatorios.filter(atributo => alunoInformado[atributo] == null)
+       
+        
+        if( atributosNaoInformados.length > 0){
+            res.status(400)
+            res.json({
+                mensagem: "Dados obrigatórios nao informados",
+                status: 400,
+                erro: `Lista dos atributos obrigatórios não informados: ${atributosNaoInformados.join(", ")}`
+            })
+            res.end()
+            return
+        }
+
+                      
+        const ultimoIDbanco = dadosBanco.alunos[dadosBanco.alunos.length - 1].id
+
+        alunoInformado.id = ultimoIDbanco + 1
+
+        //adicionar o aluno ao banco de dados
+        dadosBanco.alunos.push(alunoInformado)
+
+        //persistencia dos dados no banco
+        fs.writeFileSync('bancoAlunos.json', JSON.stringify(dadosBanco))
+
+        res.status(201)
+        res.json({
+            mensagem: "Aluno cadastrado com sucesso",
+            status: 201,
+            aluno: aluno
+        })
+        res.end()
+    }
+    catch(erro){
+        res.status(500)
+        res.json({
+            mensagem: "Erro ao cadastrar aluno",
+            status: 500,
+            erro: erro.message
+        })
+        res.end()
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------
 
 //3º criação do servidor
 app.listen(8000, () => {
