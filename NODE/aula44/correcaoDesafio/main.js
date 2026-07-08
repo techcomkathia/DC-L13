@@ -173,6 +173,69 @@ app.post('/alunos', (req, res) => {
 
 
 
+app.get('/unidades', (req, res) => {
+
+    res.status(200)
+    res.json({
+        qtdUnidades: dadosBanco.unidades.length,
+        unidades: dadosBanco.unidades
+    })
+    res.end()
+})
+
+
+app.post('/unidades', (req, res) => {
+    try{
+
+        const unidadeInformada = req.body
+        const camposObrigatorios = [ "nome", "endereco", "telefone" ]
+
+        const atributosNaoInformados = camposObrigatorios.filter(atributo => unidadeInformada[atributo] == null)
+       
+        
+        if( atributosNaoInformados.length > 0){
+            res.status(400)
+            res.json({
+                mensagem: "Dados obrigatórios nao informados",
+                status: 400,
+                erro: `Lista dos atributos obrigatórios não informados: ${atributosNaoInformados.join(", ")}`
+            })
+            res.end()
+            return
+        }
+
+        unidadeInformada.id = dadosBanco.unidades[dadosBanco.unidades.length - 1].id + 1
+        
+        //adicionar o unidade ao banco de dados
+        dadosBanco.unidades.push(unidadeInformada)
+
+        //persistencia dos dados no banco
+        fs.writeFileSync('bancoUnidades.json', JSON.stringify(dadosBanco))
+
+        res.status(201)
+        res.json({
+            mensagem: "Unidade cadastrada com sucesso",
+            status: 201,
+            unidade: unidadeInformada
+        })
+        res.end()
+
+
+
+    }
+    catch(erro){
+        res.status(500)
+        res.json({
+            mensagem: "Erro ao cadastrar unidade",
+            status: 500,
+            erro: erro.message
+        })
+        .end()
+    }
+})
+
+
+
 
 
 
