@@ -1,15 +1,17 @@
-// arquivo que contém as configurações do sequelize e inicializa a conexão com o banco de dados
 const {Sequelize} = require('sequelize');
 
-//gerar uma nova instancia do sequelize
-const sequelize = new Sequelize('livrarialive13', 'root', 'km2026', {host: 'localhost', dialect: 'mysql', port: 3306});
+//Sequelize('nomeBancoDaos', 'username', 'password', {host: 'localhost', dialect: 'mysql', port: 3306});
 
-sequelize.authenticate() //método assincrônico que verifica se a conexão com o banco de dados foi bem sucedida
+const sequelize = new Sequelize('vendasLive13', 'root', 'km2026', {host: 'localhost', dialect: 'mysql', port: 3306});
+
+//utilizar o méo sync para criar/ atualizar  as tabelasno banco de dados
+sequelize.authenticate()
 .then(() => {
-    console.log('Conectado ao banco de dados com sucesso!');
+    sequelize.sync({alter: true});
+    console.log('Conectado ao banco de dados com sucesso e sincronizado!');
 })
 .catch((error) => {
     console.error('Erro ao conectar ao banco de dados:', error);
-});
+})
 
 module.exports = sequelize

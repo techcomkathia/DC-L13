@@ -1,5 +1,5 @@
 //importar o sequelize (conexão com o banco de dados)
-const sequelize = require('../modelos/sequelize');
+const sequelize = require('./ExemploSequelize');
 //importar o DataTypes
 const {DataTypes} = require('sequelize');
 /*id_autor int AI PK 
