@@ -35,7 +35,7 @@ const ProdutoresModel = sequelize.define('produtor', {
 },
 {
     tableName: 'produtor',
-    timestamps: true
+    timestamps: false
 }
 );
 

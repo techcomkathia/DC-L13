@@ -24,7 +24,7 @@ const produtoresModel = require('./modelos/ProdutoresModel');
 //     console.error('Erro ao inserir item:', error);
 // });
 
-produtoresModel.create({
+/*produtoresModel.create({
     nomeProdutor: 'Cleitinho Lima',
     endereco: 'Rua 1',
     cidade: 'Recife',
@@ -33,4 +33,14 @@ produtoresModel.create({
     console.log('Produtor inserido com sucesso!');
 }).catch((error) => {
     console.error('Erro ao inserir produtor:', error);
-})
+})*/
+
+//seleção de todos os itens
+itensModel.findAll().
+    then((itens) => {
+       itens.forEach((item) => {
+           console.log(item.dataValues.nomeItem)
+       });
+    }).catch((error) => {
+        console.error('Erro ao selecionar itens:', error);
+    });
