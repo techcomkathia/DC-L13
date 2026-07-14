@@ -25,7 +25,7 @@ const LivrosModel =  sequelize.define('livros', {
         allowNull: false
     },
 //definição das chaves estrangeiras
-    id_categoria: {
+    categoria_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -33,7 +33,7 @@ const LivrosModel =  sequelize.define('livros', {
             key: 'id_categoria'
         }
     },
-    id_autor: {
+    autor_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
