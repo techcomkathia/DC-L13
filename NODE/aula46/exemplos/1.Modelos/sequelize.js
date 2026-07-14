@@ -4,7 +4,8 @@ const sequelize = new Sequelize('livrariaLive13', 'root', 'km2026',
     {
         host: 'localhost',
         dialect: 'mysql', 
-        port: 3306
+        port: 3306,
+        logging:false //desabilitar os logs dos comandos sql executados no banco que são mostrados no terminal
     }
 );
 
