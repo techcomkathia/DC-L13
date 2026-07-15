@@ -21,21 +21,32 @@ async function listarTodasCategorias(){
 }
 
 async function listarUmaCategoria(id) {
-     const dado = await CategoriasModel.findByPk(id)
-     if(dado.dataValues){
-        console.log(dado.dataValues)
-        return { categoria: dado.dataValues }
+     try{
+         const dado = await CategoriasModel.findByPk(id)
+      if(dado.dataValues){
+         console.log(dado.dataValues)
+         return { categoria: dado.dataValues }
+      }
+      else{
+         console.log('categoria nao encontrada')
+         return { erro: 'categoria nao encontrada' }
+      }
      }
-     else{
-        console.log('categoria nao encontrada')
-        return { erro: 'categoria nao encontrada' }
+     catch(error){
+        console.log(error)
+        return { erro: error.message }
      }
      
 }
 
 async function criarUmaCategoria(nomeCategoria) {
      const dado = await CategoriasModel.create({nome: nomeCategoria})
-     if(dado.dataValues){
+     if(nomeCategoria == null){
+        console.log('nome nao informado')
+        return { erro: 'nome nao informado' }
+        
+     }
+     else if(dado.dataValues){
         console.log(dado.dataValues)
         return { categoria: dado.dataValues }
      }

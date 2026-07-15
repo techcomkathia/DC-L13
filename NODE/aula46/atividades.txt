@@ -2,3 +2,11 @@ Atividade 1
 Crie o aquivo de serviços para Autores, com a função listar todos os autores.
 Importante: No arquivo sequelize.js faça as mudanças das credenciais para os seus dados (nome do banco e senha).
 Para executar os arquivos não esqueça de fazer as instações dos módulos (sequelize, express, mysql2 e nodemon)
+
+Atividade 2 
+Com base nos serviços listarCategoria e CriarCategoria, faça os respectivos controladores.
+Importante: 
+
+getCategoria (usa o req.params para obter os parâmetros da URL, o id da categoria)
+
+postCategoria (usa o req.body para obter os parâmetros do corpo da requisição, o nome da categoria, no json com um objeto com atributo nome)
