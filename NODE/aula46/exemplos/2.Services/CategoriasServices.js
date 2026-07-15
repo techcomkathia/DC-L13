@@ -20,4 +20,35 @@ async function listarTodasCategorias(){
 
 }
 
-listarTodasCategorias()
+async function listarUmaCategoria(id) {
+     const dado = await CategoriasModel.findByPk(id)
+     if(dado.dataValues){
+        console.log(dado.dataValues)
+        return { categoria: dado.dataValues }
+     }
+     else{
+        console.log('categoria nao encontrada')
+        return { erro: 'categoria nao encontrada' }
+     }
+     
+}
+
+async function criarUmaCategoria(nomeCategoria) {
+     const dado = await CategoriasModel.create({nome: nomeCategoria})
+     if(dado.dataValues){
+        console.log(dado.dataValues)
+        return { categoria: dado.dataValues }
+     }
+     else{
+        console.log('categoria nao criada')
+        return { erro: 'categoria nao criada' }
+     }
+}
+
+
+module.exports = {
+    listarTodasCategorias,
+    listarUmaCategoria,
+    criarUmaCategoria
+}
+

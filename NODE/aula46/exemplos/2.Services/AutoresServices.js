@@ -13,4 +13,7 @@ async function listarTodosAutores(){
     }
 }
 
-listarTodosAutores()
+module.exports = {
+    listarTodosAutores
+}
+
