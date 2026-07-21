@@ -13,7 +13,24 @@ async function listarTodosAutores(){
     }
 }
 
+async function criarAutor(nome, nacionalidade, data_nascimento) {
+    try{
+        const dados = await AutoresModel.create({nome: nome, nacionalidade: nacionalidade, data_nascimento: data_nascimento})
+        console.log(dados)
+        
+        return { autor: dados.dataValues }
+
+    }
+    catch(error){
+        console.log(error)
+        return { erro: error.message }
+    }
+
+    
+}
+
 module.exports = {
-    listarTodosAutores
+    listarTodosAutores,
+    criarAutor
 }
 

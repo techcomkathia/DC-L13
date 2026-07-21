@@ -32,9 +32,27 @@ const validacaoCategoria = (req, res, next) => {
     next()
 
 }
+
+function validacaoAutor(req, res, next) {
+    const {nome, nacionalidade, data_nascimento} = req.body
+    if(!nome || !nacionalidade || !data_nascimento){
+        res.status(400).json({status: 400, erro: 'nome, nacionalidade e data_nascimento sao obrigatorios'})
+        return
+    }
+    if(nome.length < 3){
+        res.status(400).json({status: 400, erro: 'nome nao pode ter menos de 3 caracteres'})
+        return
+    }
+    if(nacionalidade.length < 3){
+        res.status(400).json({status: 400, erro: 'nacionalidade nao pode ter menos de 3 caracteres'})
+        return
+    }
+    next()
+}
 module.exports = {
     validacaoLivro,
-    validacaoCategoria}
+    validacaoCategoria,
+    validacaoAutor}
 
 //ATIVIDADE 1
 
