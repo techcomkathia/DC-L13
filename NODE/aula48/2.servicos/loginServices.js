@@ -43,4 +43,8 @@ async function logarUsuario(email, senha) {
     
 }
 
-logarUsuario('joao@email.com', 'senha errada') //erro
+//logarUsuario('joao@email.com', 'senha errada') //erro
+
+module.exports = {
+    logarUsuario
+}

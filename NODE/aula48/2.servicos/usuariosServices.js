@@ -57,10 +57,12 @@ async function  buscarUsuarioPorEmail(email) {
     }
 }
 
+//DESAFIO: construa os serviços para listar todos os usuarios, listar um usuario, atualizar e deletar um usuario
+
 module.exports = {
     criarUsuario,
     buscarUsuarioPorEmail
 }
 
 
-criarUsuario('joao', 'joao@email.com', '123456')
+//criarUsuario('joao', 'joao@email.com', '123456')
