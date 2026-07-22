@@ -18,6 +18,7 @@ async function criarUsuario(nome, email, senha) {
         //se existir, retorna um erro de email duplicado
         if(usuarioEncontrado){
             //existe: retorna o erro de email duplicado
+            console.log('Email duplicado')
             return { erro: "Email duplicado" }
         }
 
@@ -43,9 +44,9 @@ async function criarUsuario(nome, email, senha) {
 
 }
 
-function buscarUsuarioPorEmail(email) {
+async function  buscarUsuarioPorEmail(email) {
     try{
-        const usuarioEncontrado = usuarioModel.findOne({ where: { email: email } });
+        const usuarioEncontrado =await usuarioModel.findOne({ where: { email: email } });
         if(usuarioEncontrado){
             return { usuario: usuarioEncontrado.dataValues }
         }
@@ -60,3 +61,6 @@ module.exports = {
     criarUsuario,
     buscarUsuarioPorEmail
 }
+
+
+criarUsuario('joao', 'joao@email.com', '123456')
