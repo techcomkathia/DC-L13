@@ -57,11 +57,31 @@ async function  buscarUsuarioPorEmail(email) {
     }
 }
 
+async function  buscarUsuarioPorId(id) {
+    try{
+        const usuarioEncontrado =await usuarioModel.findByPk(id);
+        if(usuarioEncontrado){
+            return { usuario: usuarioEncontrado.dataValues }
+        }
+        return { erro: "Usuário nao encontrado" }
+    }
+    catch(error){
+        return { erro: error.message }
+    }
+}
+
+
+async function buscarUsuarios() {
+    const usuarios = await usuarioModel.findAll();
+    return { usuarios: usuarios.map(usuario => usuario.dataValues) }
+}
 //DESAFIO: construa os serviços para listar todos os usuarios, listar um usuario, atualizar e deletar um usuario
 
 module.exports = {
     criarUsuario,
-    buscarUsuarioPorEmail
+    buscarUsuarioPorEmail,
+    buscarUsuarios,
+    buscarUsuarioPorId
 }
 
 

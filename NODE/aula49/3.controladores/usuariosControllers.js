@@ -8,6 +8,18 @@
 
 const usuariosServices = require('../2.servicos/usuariosServices');
 
+async function getUsuarios(req, res) {
+    try{
+        const usuarios = await usuariosServices.buscarUsuarios()
+        res.status(200).json(usuarios)
+    }
+    catch(error){
+        console.log(error);
+        res.status(500).json({ status: 500, dados: error, mensagem: 'Erro ao buscar os usuarios' });
+    }
+    
+}
+
 async function postUsuario(req, res) {
     try{
         const { email, senha, nome } = req.body;
@@ -28,4 +40,4 @@ async function postUsuario(req, res) {
 
 //DESAFIO: construa os controladores para listar, atualizar e deletar um usuario
 
-module.exports = { postUsuario };
+module.exports = { postUsuario, getUsuarios};

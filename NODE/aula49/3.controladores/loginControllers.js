@@ -17,7 +17,9 @@ async function postLogin(req, res) {
             res.status(400).json({ status: 400, mensagem: dadosDoServico.erro });
             return;
         }
-        res.status(200).json({ status: 200, dados: dadosDoServico.usuario, mensagem: 'Login efetuado com sucesso!' });
+        dadosDoServico.status = 200
+
+        res.status(200).json(dadosDoServico);
     }
     catch(error){
         console.log(error);

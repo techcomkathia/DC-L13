@@ -1,16 +1,10 @@
-// executar o servico de login para verificação da senha do usuário
 
 const bcrypt = require('bcrypt');
 const usuarioModel = require('../1.modelos/usuariosModel')
+require('dotenv').config({path: '../.env'})
+const jwt = require('jsonwebtoken');
 
-//criação da função de login:
-//será passado email e senha e retornar um objeto com o usuario e mensagem de sucesso ou erro
 
-
-//ATIVIDADE 2 :
-/* crie uma função assíncrona para logar um usuario, será recebido um email e uma senha.
-verifique se o email existe no banco de dados, se existir, verifique se a senha corresponde ao hash salvo no banco de dados.
-se a senha estiver correta, retorne o usuario e uma mensagem de sucesso, caso contrário, retorne um erro.*/
 
 async function logarUsuario(email, senha) {
 
@@ -26,10 +20,27 @@ async function logarUsuario(email, senha) {
         const senhaCriptografada = usuarioEncontrado.dataValues.senha
         const senhaCorreta = await bcrypt.compare(senha, senhaCriptografada)
 
+        //ATIVIDADE 2 :
+        /*
+        Quando a senha estiver correta gere um token JWT que no payload contenha o email do usuário, o id do usuário e o nome do usuário.
+        O token deve expirar em 1 hora.
+        DICAS:
+        use o módulo jsonwebtoken para gerar o token com o método sign
+        use o módulo dotenv para carregar as variáveis de ambiente (importante no método config usar o {path: '../.env'} para indicar onde está o arquivo .env)
+        use o módulo bcrypt para comparar as senhas(essa funcionalidade ja foi implementada na atividade da aula passada)
+        */
 
         if(senhaCorreta){
-            console.log('Senha correta, login efetuado com sucesso!')
-            return { usuario: usuarioEncontrado.dataValues, mensagem: "Login efetuado com sucesso!" }
+            const token = jwt.sign({
+                    usuarioId: usuarioEncontrado.dataValues.id,
+                    email: usuarioEncontrado.dataValues.email,
+                    nome: usuarioEncontrado.dataValues.nome
+                },
+                process.env.PALAVRA_SECRETA_JWT,
+                {expiresIn: '1h'}
+            )
+            console.log('Senha correta, login efetuado com sucesso!', token)
+            return { token: token, mensagem: "Login efetuado com sucesso!Salve o token para usar nas rotas privadas.Ele é valido por 1h" }
         }
         else{
             console.log('Senha incorreta, mensagem de erro retornada')
@@ -43,8 +54,9 @@ async function logarUsuario(email, senha) {
     
 }
 
-//logarUsuario('joao@email.com', 'senha errada') //erro
+//logarUsuario('joao@email.com', '123456')
 
 module.exports = {
     logarUsuario
 }
+
