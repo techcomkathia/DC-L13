@@ -23,7 +23,7 @@ async function getUsuarios(req, res) {
 async function postUsuario(req, res) {
     try{
         const { email, senha, nome } = req.body;
-        const dadosDoServico = await usuariosServices.criarUsuario(email, senha, nome);
+        const dadosDoServico = await usuariosServices.criarUsuario( nome, email, senha);
         
         if(dadosDoServico.erro){
             res.status(400).json({ status: 400, dados: dadosDoServico.erro, mensagem: 'Email duplicado' });

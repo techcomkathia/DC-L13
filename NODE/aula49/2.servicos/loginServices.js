@@ -20,16 +20,7 @@ async function logarUsuario(email, senha) {
         const senhaCriptografada = usuarioEncontrado.dataValues.senha
         const senhaCorreta = await bcrypt.compare(senha, senhaCriptografada)
 
-        //ATIVIDADE 2 :
-        /*
-        Quando a senha estiver correta gere um token JWT que no payload contenha o email do usuário, o id do usuário e o nome do usuário.
-        O token deve expirar em 1 hora.
-        DICAS:
-        use o módulo jsonwebtoken para gerar o token com o método sign
-        use o módulo dotenv para carregar as variáveis de ambiente (importante no método config usar o {path: '../.env'} para indicar onde está o arquivo .env)
-        use o módulo bcrypt para comparar as senhas(essa funcionalidade ja foi implementada na atividade da aula passada)
-        */
-
+       
         if(senhaCorreta){
             const token = jwt.sign({
                     usuarioId: usuarioEncontrado.dataValues.id,
