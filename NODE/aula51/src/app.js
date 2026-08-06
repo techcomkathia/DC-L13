@@ -24,7 +24,12 @@ app.get('/exemplo', autenticacao, (req, res) => {
     })
 })
 
+
+
 app.listen(3000, () => {
     banco.authenticate();
     console.log('Servidor rodando na porta 3000');
 })
+
+module.exports = app
+

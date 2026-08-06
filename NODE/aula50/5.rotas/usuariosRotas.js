@@ -1,6 +1,7 @@
 const express = require('express');
 const  usuariosController = require('../3.Controladores/usuariosControllers');
-const validacaoUsuario = require('../4.middlewares/validacaoMiddlewares');
+const validacaoUsuario = require('../4.middlewares/validacaoMiddlewares')
+const autenticacao = require('../4.middlewares/autenticacaoMiddleware')
 
 const router = express.Router();
 
@@ -8,7 +9,7 @@ const router = express.Router();
 ///usuarios - post
 router.get('/', (req, res)=> usuariosController.getUsuarios(req, res));
 router.post('/', validacaoUsuario,(req, res)=> usuariosController.postUsuario(req, res));
-router.delete('/:id', autenticacao, execuçãoControler)
+router.delete('/:id', autenticacao,(req, res)=> usuariosController.deleteUsuario(req, res));
 //ATIVIDADE: crie uma rota para deletar um usuario por id, que exija autenticação. Crie o controlador e o serviço para que tudo funcione corretamente
 
 //ao tentar deletar um usuario sem autenticação não será executado o controlador

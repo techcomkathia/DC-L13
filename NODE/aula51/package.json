@@ -3,15 +3,17 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jest": "^30.4.2",
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.23.1",
     "nodemon": "^3.1.14",
-    "sequelize": "^6.37.8",
-    "jest": "^30.4.2"
+    "sequelize": "^6.37.8"
   },
   "scripts": {
     "test": "jest --passWithNoTests ",
     "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "supertest": "^7.2.2"
   }
 }
-

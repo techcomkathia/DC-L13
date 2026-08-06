@@ -77,11 +77,26 @@ async function buscarUsuarios() {
 }
 //DESAFIO: construa os serviços para listar todos os usuarios, listar um usuario, atualizar e deletar um usuario
 
+async function excluirUsuario(id){
+    try{
+        const usuarioEncontrado = await usuarioModel.findByPk(id);
+        if(!usuarioEncontrado){
+            return { erro: "Usuário nao existe" }
+        }
+        await usuarioModel.destroy({ where: { id: id } });
+        return { mensagem: "Usuário excluido com sucesso!" }
+    }
+    catch(error){
+        return { erro: error.message }
+    }
+
+}
 module.exports = {
     criarUsuario,
     buscarUsuarioPorEmail,
     buscarUsuarios,
-    buscarUsuarioPorId
+    buscarUsuarioPorId,
+    excluirUsuario
 }
 
 

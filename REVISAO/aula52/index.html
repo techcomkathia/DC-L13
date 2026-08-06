@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ocasiona um erro pois o script manipula o dom, que  ainda nao foi carregado
+        console.log(document.getElementById('exemplo').innerHTML)
+    </script>
+</head>
+<body>
+    <h1 id="exemplo">Título exemplo</h1>
+    <script>
+        //sucesso, pois o dom e os elementos estao carregados na página antes da execução do script
+        console.log(document.getElementById('exemplo').innerHTML)
+    </script>
+    
+</body>
+</html>

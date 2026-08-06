@@ -37,7 +37,27 @@ async function postUsuario(req, res) {
     }
 }
 
+async function deleteUsuario(req, res) {
+    try{
+        const { id } = req.params;
+        console.log("id: " + id)
+        const dadosDoServico = await usuariosServices.excluirUsuario(id);
+   
+        if(dadosDoServico.erro){
+            res.status(400).json({ status: 400, erro: dadosDoServico.erro});
+            return;
+        }
+
+        res.status(200).json({ status: 200, info: dadosDoServico.mensagem});
+
+    }
+    catch(erro){
+        res.status(500).json({ status: 500, erro: erro, mensagem: 'Erro ao deletar o usuario' });
+    }
+    
+}
+
 
 //DESAFIO: construa os controladores para listar, atualizar e deletar um usuario
 
-module.exports = { postUsuario, getUsuarios};
+module.exports = { postUsuario, getUsuarios, deleteUsuario};
