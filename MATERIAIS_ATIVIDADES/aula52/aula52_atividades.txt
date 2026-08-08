@@ -1,0 +1,41 @@
+Atividades de revisão - Aula 52
+
+1) Funções com diferentes resultados
+- Crie uma função chamada converterCelsiusFahrenheit que recebe um valor em Celsius e retorna a temperatura em Fahrenheit.
+- Crie uma função chamada saudacaoUsuario que recebe nome e hora e retorna uma mensagem diferente para manhã, tarde ou noite.
+- Crie uma função chamada repetirTexto que recebe um texto e um número e retorna o texto repetido esse número de vezes.
+
+2) Funções como parâmetros
+- Crie uma função chamada aplicarDesconto que recebe um valor e uma função de desconto.
+- A função de desconto deve receber o valor original e devolver o novo valor.
+- Teste aplicarDesconto usando uma função que aplica 10% e outra que subtrai um valor fixo.
+
+3) Objetos e regras de validação
+- Crie um objeto chamado aluno com as propriedades: nome, idade, notas (array) e ativo (boolean).
+- Crie uma função chamada validarAluno que verifica:
+  - nome não pode estar vazio;
+  - idade deve ser maior que 0;
+  - notas deve ser um array com pelo menos uma nota.
+- Se alguma validação falhar, lance um erro com mensagem personalizada.
+- Se todos os dados estiverem corretos, retorne 'Aluno válido'.
+
+4) Tratamento de erros com try/catch
+- Crie uma função chamada calcularDivisao que recebe dois números e lança um erro se o divisor for 0.
+- Use try/catch para chamar calcularDivisao com divisores válidos e inválidos.
+- No catch, exiba a mensagem do erro e também uma mensagem alternativa.
+
+5) Referência de objetos e spread
+- Crie um objeto pedido com propriedades: id, itens (array) e total.
+- Faça uma cópia direta do objeto e altere total. Verifique se o pedido original mudou.
+- Faça uma cópia com spread ({...pedido}) e modifique total. Verifique o original novamente.
+- Crie uma cópia profunda do pedido com itens copiados separadamente e altere um item sem afetar o original.
+
+6) Condicionais e ternário com status
+- Crie uma função chamada verificarStatusPedido que recebe um objeto com status.
+- Use operador ternário para retornar 'pedido em andamento' ou 'pedido concluído'.
+- Crie outra função chamada avaliarNota que retorna 'bom' para nota >= 7 e 'ruim' caso contrário.
+
+7) Desafio extra
+- Crie uma função chamada encontrarExtremos que recebe um array de números e retorna um objeto com maior e menor valor.
+- Use um laço for para percorrer o array.
+- Crie uma função chamada somarPares que recebe um array de números e retorna a soma apenas dos valores pares.

@@ -1,0 +1,44 @@
+Atividades de revisão - Aula 53
+
+1) Manipulação de arrays
+- Crie um array chamado carrinho com pelo menos 5 produtos (nomes como strings).
+- Adicione dois produtos no final e um no início do array.
+- Remova o segundo item e o último item usando métodos adequados.
+- Crie uma cópia do carrinho usando slice e adicione um novo item à cópia.
+- Exiba o carrinho original e a cópia.
+
+2) Iteração com diferentes laços
+- Use um for tradicional para somar todos os valores de um array numérico.
+- Use um for...of para criar um novo array com cada valor multiplicado por 2.
+- Use um while para percorrer o array até encontrar um valor maior que 50.
+- Use reverse e join para exibir o array numérico em ordem inversa como string.
+
+3) Desafio de organização de eventos
+- Crie dois arrays: listaPista e listaVIP com pessoas para um evento.
+- Escreva um programa que convide 8 pessoas no total, alternando 3 da pista e 1 do VIP.
+- Armazene os convidados aceitos em um array chamado listaConvidados.
+- Ao final, exiba a lista de convidados em uma frase no console.
+
+4) DOM e manipulação de conteúdo
+- Crie um HTML com um título e um botão.
+- No JavaScript, crie um parágrafo dinamicamente ao clicar no botão.
+- Use innerText para definir o texto do parágrafo.
+- Depois, use innerHTML para adicionar uma parte em negrito dentro do mesmo parágrafo.
+
+5) Objetos e criação de cards no DOM
+- Crie um array de objetos livros com título, autor e ano.
+- Para cada livro, gere um card no DOM contendo essas informações.
+- Use createElement para criar os elementos e appendChild para inserir na página.
+- Adicione uma classe CSS ao card para estilo (pode ser apenas um nome de classe).
+
+6) Formulário e consumo simulado de API
+- Crie um formulário com campos de nome, email e senha.
+- Capture o submit e use preventDefault().
+- Simule uma API usando fetch com um arquivo JSON local ou com Promise que resolve um objeto.
+- Se a senha tiver menos de 6 caracteres, exiba erro; caso contrário, exiba sucesso com uma mensagem na página.
+
+7) JSON e conversão de dados
+- Crie uma string JSON com uma lista de usuários (nome, email, idade).
+- Converta a string para objeto com JSON.parse.
+- Filtre os usuários com idade maior que 18 e, em seguida, converta de volta para JSON usando JSON.stringify.
+- Exiba o JSON final no console.
