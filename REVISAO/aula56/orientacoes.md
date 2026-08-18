@@ -237,21 +237,10 @@ Agora vamos implementar a arquitetura planejada.
 
 Durante a implementação, vamos identificar na prática:
 
-Abstração
-
-Quais características realmente precisamos representar?
-
-Encapsulamento
-
-Quais informações precisam ser protegidas?
-
-Herança
-
-Quais classes possuem características em comum?
-
-Polimorfismo
-
-Quais comportamentos podem existir em diferentes versões?
+Abstração: Quais características realmente precisamos representar?
+Encapsulamento: Quais informações precisam ser protegidas?
+Herança: Quais classes possuem características em comum?
+Polimorfismo: Quais comportamentos podem existir em diferentes versões?
 
 A implementação será construída junto adicionando os atributos e métodos definidos durante as etapas anteriores.
 
