@@ -74,3 +74,39 @@ Pensando apenas no problema apresentado:
 Liste as possíveis entidades que você acredita que deverão ser representadas no sistema.
 
 Não pense ainda em atributos ou métodos.
+
+```
+- Cliente
+
+- Pedido
+
+- Produto 
+  - tipos de produtos (Bebida, Sobremesa, Hamburguer ...)
+
+- Pagamento
+  - tipos de pagamento (Pix, Dinheiro, Cartão ...)
+```
+
+
+# Etapa 2 — Conhecendo cada entidade
+
+
+Agora que temos uma primeira ideia das entidades do sistema, precisamos entender melhor cada uma delas.
+
+Imagine que você precisa explicar para outro desenvolvedor como cada entidade funciona.
+
+### Questão 2
+
+Para cada entidade identificada anteriormente, responda:
+
+1. Quais informações precisamos guardar sobre ela?
+2. Quais ações ela precisa realizar?
+3. Quais informações não deveriam ser alteradas livremente por qualquer parte do sistema?
+
+Não é necessário escrever código.
+
+Organize suas respostas pensando em:
+
+> **O que essa entidade sabe?**
+>
+> **O que essa entidade faz?**
