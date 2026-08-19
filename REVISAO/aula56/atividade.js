@@ -165,7 +165,7 @@ adicionarAdicional()
 removerAdicional()
 calcularPrecoFinal()
 exibirDescricao()*/
-class Hamburguer{
+class Hamburguer extends Produto{
  constructor(nome, preco, tipoPao, adicionais=[]){
     super(nome, preco);
     this.tipoPao = tipoPao;
