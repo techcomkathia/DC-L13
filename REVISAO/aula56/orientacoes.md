@@ -247,3 +247,10 @@ A implementação será construída junto adicionando os atributos e métodos de
 ## Questão 3
 
 Faça a definição das classes Pedido e Cliente 
+
+## Questão 4 
+
+Faça a definição das classes Produto, Bebida, Sobremesa e Hamburguer. 
+
+## Questão 5
+Faça a definição das classes Pagamento, Pix, Dinheiro e Cartao 
