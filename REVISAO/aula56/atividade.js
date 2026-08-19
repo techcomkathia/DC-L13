@@ -298,3 +298,188 @@ parcelas
 Métodos
 processarPagamento()
 validarPagamento()*/
+
+class Pagamento {
+    constructor(valor) {
+        this.valor = valor;
+        this.status = 'Pendente';
+    }
+
+    processarPagamento() {
+        this.status = 'Pago';
+        return 'Pagamento processado com sucesso';
+    }
+
+    cancelarPagamento() {
+        if (this.status === 'Pago') {
+            this.status = 'Cancelado';
+            return 'Pagamento cancelado';
+        }
+
+        return 'Não é possível cancelar um pagamento que não foi realizado';
+    }
+
+    exibirStatus() {
+        return `Valor: R$ ${this.valor}, Status: ${this.status}`;
+    }
+}
+
+
+
+
+class Pix extends Pagamento {
+    constructor(valor, chavePix) {
+        super(valor);
+        this.chavePix = chavePix;
+    }
+
+    validarPagamento() {
+        if(this.chavePix !== '') {
+            return true;
+        }
+        return false;
+    }
+
+    processarPagamento() {
+        if (!this.validarPagamento()) {
+            return 'Chave Pix inválida';
+        }
+
+        this.status = 'Pago';
+
+        return `Pagamento de R$ ${this.valor} realizado via Pix`;
+    }
+}
+
+class Dinheiro extends Pagamento {
+    constructor(valor, valorRecebido) {
+        super(valor);
+        this.valorRecebido = valorRecebido;
+    }
+
+    calcularTroco() {
+        return this.valorRecebido - this.valor;
+    }
+
+    processarPagamento() {
+        if (this.valorRecebido < this.valor) {
+            return 'Valor recebido insuficiente';
+        }
+        else if(this.valorRecebido > this.valor) {
+            this.status = 'Pago';
+            return 'Troco: R$ ' + this.calcularTroco();
+        }
+
+        this.status = 'Pago';
+
+        return `Pagamento realizado.`;
+    }
+}
+
+
+class Cartao extends Pagamento {
+    constructor(valor, numeroCartao, bandeira, tipo, parcelas = 1) {
+        super(valor);
+        this.numeroCartao = numeroCartao;
+        this.bandeira = bandeira;
+        this.tipo = tipo;
+        this.parcelas = parcelas;
+    }
+
+    validarPagamento() {
+        const tiposValidos = ['debito', 'credito'];
+
+        return (
+            this.numeroCartao.length >= 4 &&
+            tiposValidos.includes(this.tipo)
+        );
+    }
+
+    processarPagamento() {
+        if (!this.validarPagamento()) {
+            return 'Dados do cartão inválidos';
+        }
+
+        if (this.tipo === 'debito') {
+            this.status = 'Pago';
+
+            return `Pagamento de R$ ${this.valor} realizado no cartão de débito`;
+        }
+
+        this.status = 'Pago';
+
+        return `Pagamento de R$ ${this.valor} realizado no cartão de crédito em ${this.parcelas}x`;
+    }
+}
+
+
+/* Cliente */
+
+const cliente = new Cliente(
+    'Maria',
+    '82999999999',
+    'Rua das Flores, 100'
+);
+
+
+/* Produtos */
+
+const hamburguer = new Hamburguer(
+    'X-Bacon',
+    25,
+    'Brioche'
+);
+
+hamburguer.adicionarAdicional('bacon');
+hamburguer.adicionarAdicional('queijo');
+
+
+const bebida = new Bebida(
+    'Coca-Cola',
+    8,
+    '500ml'
+);
+
+bebida.adicionarGelo();
+
+
+const sobremesa = new Sobremesa(
+    'Brownie',
+    12,
+    'Chocolate'
+);
+
+sobremesa.adicionarEmbalagem();
+sobremesa.adicionarDescartaveis();
+
+
+/* Pedido */
+
+const pedido = new Pedido(
+    cliente,
+    1
+);
+
+pedido.adicionarProduto(hamburguer);
+pedido.adicionarProduto(bebida);
+pedido.adicionarProduto(sobremesa);
+
+
+/* Pagamento via Pix */
+
+const pagamentoPix = new Pix(
+    pedido.calcularTotal(),
+    'adashd,jadbn,asnd,mand,masmd.,ada,md,asd,adjmahdjkah'
+);
+
+pedido.adicionarMetodoPagamento(pagamentoPix);
+
+
+/* Processando pagamento */
+
+console.log(pagamentoPix.processarPagamento());
+
+
+/* Finalizando pedido */
+
+pedido.finalizarPedido();
