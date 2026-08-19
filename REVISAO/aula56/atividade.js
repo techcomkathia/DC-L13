@@ -12,7 +12,7 @@ class Cliente{
     constructor(nome, telefone, endereco){
         this.nome = nome;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.#endereco = endereco;
     }
 
     atualizarEndereco(endereco){
@@ -42,7 +42,8 @@ exibirResumo()*/
 
 class Pedido{
     #produtos
-    constructor(cliente, produtos=[], pagamento){
+    constructor(cliente,numero, produtos=[], pagamento){
+        this.numero = numero;
         this.cliente = cliente;
         this.#produtos = produtos;
         this.pagamento = pagamento;
@@ -65,7 +66,8 @@ class Pedido{
     }
 
     calcularTotal(){
-        return this.#produtos.reduce((total, produto) => total + produto.preco, 0);
+        //todos os produtos possuem o metodo calcularPrecoFinal, ajuda o polimorfismo para fazer o calculo considerando que existem diferentes tipos de produtos e suas regras
+        return this.#produtos.reduce((total, produto) => total + produto.calcularPrecoFinal(), 0);
     }
 
     adicionarMetodoPagamento(pagamento){
@@ -110,7 +112,7 @@ class Produto{
         this.preco = preco;
     }
 
-    calcularPrecoFinal(desconto){
+    calcularPrecoFinal(desconto=0){
         return this.preco - (this.preco * desconto);
     }
 
@@ -145,10 +147,6 @@ class Bebida extends Produto{
 
     removerGelo(){
         this.possuiGelo = false;
-    }
-
-    calcularPrecoFinal(desconto){
-        return this.preco - (this.preco * desconto);
     }
 
     //polimorfismo
@@ -263,9 +261,6 @@ class Sobremesa extends Produto{
         this.possuiDescartaveis = true;
     }
 
-    calcularPrecoFinal(desconto){
-        return this.preco - (this.preco * desconto);
-    }
 
     exibirDescricao(){
         return(`Nome: ${this.nome}, Preco: ${this.preco}, Tipo: ${this.tipo}, Possui embalagem: ${this.possuiEmbalagem}, Possui descartaveis: ${this.possuiDescartaveis}`)
