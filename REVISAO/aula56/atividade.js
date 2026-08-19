@@ -228,7 +228,7 @@ class Hamburguer extends Produto{
     }
 
     exibirDescricao(){
-        return(`Nome: ${this.nome}, Preco: ${this.preco}, Tipo de pao: ${this.tipoPao}, Adicionais: ${this.adicionais}, Preço final: ${this.precoFinal}`)
+        return(`Nome: ${this.nome}, Preco: ${this.preco}, Tipo de pao: ${this.tipoPao}, Adicionais: ${this.adicionais.map(adicional => adicional.tipo)}, Preço final: ${this.precoFinal}`)
     }
 
 }
