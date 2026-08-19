@@ -272,3 +272,34 @@ class Sobremesa extends Produto{
     }
 }
 
+/*4. Pagamento
+Atributos
+valor
+status
+Métodos
+processarPagamento()
+cancelarPagamento()
+exibirStatus()
+
+4.1 Pix
+Atributos
+chavePix
+Métodos
+processarPagamento()
+validarPagamento()
+
+4.2 Dinheiro
+Atributos
+valorRecebido
+Métodos
+processarPagamento()
+calcularTroco()
+
+4.3 Cartão
+Atributos
+numeroCartao
+bandeira
+parcelas
+Métodos
+processarPagamento()
+validarPagamento()*/
